@@ -100,6 +100,14 @@ mark quantity/unit_price as "not_present" rather than assuming a quantity of 1. 
 no itemized table at all, return an empty line_items list rather than inventing a single generic \
 row.
 
+## Multi-image receipts
+Sometimes you will be given more than one image in a single request. When that happens, the \
+images are sequential, overlapping sections of one single physical receipt (it didn't fit in one \
+photo), given in top-to-bottom order -- they are not separate receipts. Read them as one \
+continuous document and extract a single, unified result. Because the images overlap, the same \
+line item or the same header/footer text may appear in more than one image; do not double-count \
+a line item that appears in the overlap between two consecutive images.
+
 Receipts may be labeled in Indonesian, English, or a mix of both -- read the labels in whichever \
 language the receipt actually uses.
 """
@@ -129,23 +137,38 @@ _GENERATE_CONFIG = types.GenerateContentConfig(
 )
 
 
-def extract_receipt(image_path: str) -> ReceiptExtraction:
-    """Extract structured fields from a single receipt image.
+def _load_image_parts(image_paths: list[str]) -> list[types.Part]:
+    parts = []
+    for path in image_paths:
+        mime_type = mimetypes.guess_type(path)[0] or "image/jpeg"
+        with open(path, "rb") as f:
+            image_bytes = f.read()
+        parts.append(types.Part.from_bytes(data=image_bytes, mime_type=mime_type))
+    return parts
 
-    Sends the image + prompt to Gemini once. If the response doesn't parse
-    into ReceiptExtraction, retries once with the parse error fed back into
-    the prompt so the model can correct its own output.
+
+def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction:
+    """Extract structured fields from one receipt.
+
+    `image_paths` is either a single image path, or a list of image paths
+    for a receipt that had to be photographed as multiple overlapping
+    images (too long for one frame). A list is sent as multiple Parts in
+    one API call, in the given order, so the model reasons across them as
+    one document rather than as separate receipts.
+
+    Sends the image(s) + prompt to Gemini once. If the response doesn't
+    parse into ReceiptExtraction, retries once with the parse error fed
+    back into the prompt so the model can correct its own output.
     """
-    client = genai.Client(api_key=API_KEY)
+    if isinstance(image_paths, str):
+        image_paths = [image_paths]
 
-    mime_type = mimetypes.guess_type(image_path)[0] or "image/jpeg"
-    with open(image_path, "rb") as f:
-        image_bytes = f.read()
-    image_part = types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
+    client = genai.Client(api_key=API_KEY)
+    image_parts = _load_image_parts(image_paths)
 
     response = client.models.generate_content(
         model=MODEL_NAME,
-        contents=[image_part, USER_MESSAGE],
+        contents=[*image_parts, USER_MESSAGE],
         config=_GENERATE_CONFIG,
     )
 
@@ -160,21 +183,24 @@ def extract_receipt(image_path: str) -> ReceiptExtraction:
         )
         response = client.models.generate_content(
             model=MODEL_NAME,
-            contents=[image_part, retry_message],
+            contents=[*image_parts, retry_message],
             config=_GENERATE_CONFIG,
         )
         return ReceiptExtraction.model_validate_json(response.text)
 
 
 if __name__ == "__main__":
-    image_path = os.path.join("Raw Data", "receipt_002.jpeg")
-    result = extract_receipt(image_path)
+    image_paths = [
+        os.path.join("Raw Data", "receipt_026_p1.jpeg"),
+        os.path.join("Raw Data", "receipt_026_p2.jpeg"),
+    ]
+    result = extract_receipt(image_paths)
     output_json = result.model_dump_json(indent=2)
     print(output_json)
 
     output_dir = os.path.join("outputs", "sample_runs")
     os.makedirs(output_dir, exist_ok=True)
-    receipt_name = os.path.splitext(os.path.basename(image_path))[0]
-    output_path = os.path.join(output_dir, f"{receipt_name}_output.json")
+    receipt_names = "+".join(os.path.splitext(os.path.basename(p))[0] for p in image_paths)
+    output_path = os.path.join(output_dir, f"{receipt_names}_output.json")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(output_json)
