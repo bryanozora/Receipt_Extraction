@@ -1,0 +1,5308 @@
+{
+  "receipt_001": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "BABI GULING PANDE EGI",
+        "extracted_value": "BABI GULING PANDE EGI",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-09-13",
+        "extracted_value": "2026-09-13",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 246000.0,
+        "extracted_value": 246000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 24600.0,
+        "extracted_value": 24600.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 270600.0,
+        "extracted_value": 270600.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "babi guling biasa",
+              "extracted_value": "babi guling biasa"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 26000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 78000.0,
+              "extracted_value": 78000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "babi guling special",
+              "extracted_value": "babi guling special"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 42000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 42000.0,
+              "extracted_value": 42000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "es teh markisa",
+              "extracted_value": "es teh markisa"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 18000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 18000.0,
+              "extracted_value": 18000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "kelapa utuh dingin",
+              "extracted_value": "kelapa utuh dingin"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 30000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 60000.0,
+              "extracted_value": 60000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "leci tea",
+              "extracted_value": "leci tea"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 20000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 20000.0,
+              "extracted_value": 20000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "gelato massimo",
+              "extracted_value": "gelato massimo"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 28000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 28000.0,
+              "extracted_value": 28000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 25,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 6,
+      "missed_status": 0
+    }
+  },
+  "receipt_002": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "hallucinated",
+        "ground_truth_value": null,
+        "extracted_value": "Cipork Keriyuk",
+        "ground_truth_status": "illegible",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "wrong_value",
+        "ground_truth_value": "CPKYKO1202603280013",
+        "extracted_value": "CPKYK01202603280013",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-03-28",
+        "extracted_value": "2026-03-28",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 13400.0,
+        "extracted_value": 13400.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 147400.0,
+        "extracted_value": 147400.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Goreng Bacon Spesial Personal",
+              "extracted_value": "Nasi Goreng Bacon Spesial Personal"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 61600.0,
+              "extracted_value": 61600.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 61600.0,
+              "extracted_value": 61600.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Mie Kwangtong Spesial Jumbo",
+              "extracted_value": "Mie Kwangtong Spesial Jumbo"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 85800.0,
+              "extracted_value": 85800.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 85800.0,
+              "extracted_value": 85800.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 13,
+      "wrong_value": 1,
+      "hallucinated": 1,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_003": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Solaria",
+        "extracted_value": "SOLARIA",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "390RC2032026/00951",
+        "extracted_value": "390RC2032026/00951",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-03-18",
+        "extracted_value": "2026-03-18",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 140003.0,
+        "extracted_value": 140003.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 14000.0,
+        "extracted_value": 14000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 154000.0,
+        "extracted_value": 154000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi + Ayam Crispy Black Pepper Sauce",
+              "extracted_value": "Nasi + Ayam Crispy Black Pepper Sauce"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 31819.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 31819.0,
+              "extracted_value": 31819.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Goreng",
+              "extracted_value": "Nasi Goreng"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 35455.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 35455.0,
+              "extracted_value": 35455.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Goreng Special",
+              "extracted_value": "Nasi Goreng Special"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 41819.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 41819.0,
+              "extracted_value": 41819.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.981,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "Nasi + Crispy Chicken Spicy Mayo",
+              "extracted_value": "Nasi + Cripsy Chicken Spicy Mayo"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 30910.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 30910.0,
+              "extracted_value": 30910.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 18,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 4,
+      "missed_status": 0
+    }
+  },
+  "receipt_004": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "WBK Manyar",
+        "extracted_value": "WBK Manyar",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-09-26",
+        "extracted_value": "2025-09-26",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 136368.0,
+        "extracted_value": 136368.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 13637.0,
+        "extracted_value": 13637.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 150000.0,
+        "extracted_value": 150000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Bakwan Penyet",
+              "extracted_value": "Bakwan Penyet"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 33627.0,
+              "extracted_value": 33637.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 67274.0,
+              "extracted_value": 67274.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Putih Biasa",
+              "extracted_value": "Nasi Putih Biasa"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 5455.0,
+              "extracted_value": 5455.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 16365.0,
+              "extracted_value": 16365.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Telor Grg (1bj)",
+              "extracted_value": "Telor Grg (1bj)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 5910.0,
+              "extracted_value": 5910.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 5910.0,
+              "extracted_value": 5910.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Bebek Penyet",
+              "extracted_value": "Bebek Penyet"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 28637.0,
+              "extracted_value": 28637.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 28637.0,
+              "extracted_value": 28637.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Milo Cao Jumbo (Hgt/Es)",
+              "extracted_value": "Milo Cao Jumbo (Hgt/Es)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 18182.0,
+              "extracted_value": 18182.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 18182.0,
+              "extracted_value": 18182.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 26,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_005": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "hallucinated",
+        "ground_truth_value": null,
+        "extracted_value": "Bu Kris Tenggili",
+        "ground_truth_status": "illegible",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "P-37587",
+        "extracted_value": "P-37587",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-11-14",
+        "extracted_value": "2025-11-14",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 262500.0,
+        "extracted_value": 262500.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Bakwan + Empal",
+              "extracted_value": "Bakwan + Empal"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 64000.0,
+              "extracted_value": 64000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 64000.0,
+              "extracted_value": 64000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Ayam Penyet(Dada/Paha)",
+              "extracted_value": "Ayam Penyet(Dada/Paha)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 23500.0,
+              "extracted_value": 23500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 23500.0,
+              "extracted_value": 23500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Bakwan Penyet (5 Butir)",
+              "extracted_value": "Bakwan Penyet (5 Butir)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 37000.0,
+              "extracted_value": 37000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 37000.0,
+              "extracted_value": 37000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Putih",
+              "extracted_value": "Nasi Putih"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Es Teh Manis / Hangat",
+              "extracted_value": "Es Teh Manis / Hangat"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 6,
+          "extracted_index": 6,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Es Cao (Jumbo)",
+              "extracted_value": "Es Cao (Jumbo)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 7,
+          "extracted_index": 7,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Rawon (Pisah)",
+              "extracted_value": "Nasi Rawon (Pisah)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 37000.0,
+              "extracted_value": 37000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 37000.0,
+              "extracted_value": 37000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.989,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Rawon/Nasi Rawon Empal",
+              "extracted_value": "Nasi Rawon/ Nasi Rawon Empal"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 35500.0,
+              "extracted_value": 35500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 71000.0,
+              "extracted_value": 71000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 38,
+      "wrong_value": 0,
+      "hallucinated": 1,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_006": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Seniman Mie Kari",
+        "extracted_value": "Seniman Mie Kari",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "5-30146",
+        "extracted_value": "#5-30146",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-02-05",
+        "extracted_value": "2026-02-05",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 309000.0,
+        "extracted_value": 309000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 309000.0,
+        "extracted_value": 309000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SIGNATURE MIE KARI AYAM ORIGINAL - HEMAT",
+              "extracted_value": "SIGNATURE MIE KARI AYAM ORIGINAL - HEMAT"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 4.0,
+              "extracted_value": 4.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 35000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 140000.0,
+              "extracted_value": 140000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "BARA",
+              "extracted_value": "BARA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 5000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SIGNATURE MIE GORENG ORIGINAL - HEMAT",
+              "extracted_value": "SIGNATURE MIE GORENG ORIGINAL - HEMAT"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 32000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 64000.0,
+              "extracted_value": 64000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "BARA",
+              "extracted_value": "BARA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 5000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SIGNATURE MIE KARI SAPI ORIGINAL - HEMAT",
+              "extracted_value": "SIGNATURE MIE KARI SAPI ORIGINAL - HEMAT"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 40000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 80000.0,
+              "extracted_value": 80000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "BARA",
+              "extracted_value": "BARA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "missed_status",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 5000.0,
+              "extracted_value": 5000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 25,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 5,
+      "missed_status": 1
+    }
+  },
+  "receipt_007": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "PENYETAN JOSS",
+        "extracted_value": "PENYETAN JOSS",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "070325029",
+        "extracted_value": "070325029",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-03-07",
+        "extracted_value": "2025-03-07",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 365000.0,
+        "extracted_value": 365000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 36500.0,
+        "extracted_value": 36500.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 401500.0,
+        "extracted_value": 401500.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AYAM DADA + ASEM",
+              "extracted_value": "AYAM DADA + ASEM"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 26000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 26000.0,
+              "extracted_value": 26000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AYAM DADA + BENING",
+              "extracted_value": "AYAM DADA + BENING"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 26000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 26000.0,
+              "extracted_value": 26000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AYAM DADA + LODEH",
+              "extracted_value": "AYAM DADA + LODEH"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 26000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 52000.0,
+              "extracted_value": 52000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AYAM PAHA + ASEM",
+              "extracted_value": "AYAM PAHA + ASEM"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 26000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 52000.0,
+              "extracted_value": 52000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "GIMBAL UDANG + ...",
+              "extracted_value": "GIMBAL UDANG + ..."
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 32000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 32000.0,
+              "extracted_value": 32000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "LELE + LODEH",
+              "extracted_value": "LELE + LODEH"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 30000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 30000.0,
+              "extracted_value": 30000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 6,
+          "extracted_index": 6,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "NASI PUTIH",
+              "extracted_value": "NASI PUTIH"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 8.0,
+              "extracted_value": 8.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 8000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 64000.0,
+              "extracted_value": 64000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 7,
+          "extracted_index": 7,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "NILA + SOP",
+              "extracted_value": "NILA + SOP"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 35000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 35000.0,
+              "extracted_value": 35000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 8,
+          "extracted_index": 8,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "TELUR DADAR GORENG",
+              "extracted_value": "TELUR DADAR GORENG"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 8000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 9,
+          "extracted_index": 9,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "ES LEMON TEA",
+              "extracted_value": "ES LEMON TEA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 13000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 13000.0,
+              "extracted_value": 13000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 10,
+          "extracted_index": 10,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "ES TEH MANIS",
+              "extracted_value": "ES TEH MANIS"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 8000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 11,
+          "extracted_index": 11,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "ES TEH MANIS (J)",
+              "extracted_value": "ES TEH MANIS (J)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 10000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 12,
+          "extracted_index": 12,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "ES TEH TAWAR (J)",
+              "extracted_value": "ES TEH TAWAR (J)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 9000.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 9000.0,
+              "extracted_value": 9000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 46,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 13,
+      "missed_status": 0
+    }
+  },
+  "receipt_008": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "wrong_value",
+        "ground_truth_value": "PAPA RON'S PIZZA",
+        "extracted_value": "PAPA RON'S PIZZA TRANS ICON MALL SURABAYA",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "hallucinated",
+        "ground_truth_value": null,
+        "extracted_value": "141",
+        "ground_truth_status": "not_present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2024-12-31",
+        "extracted_value": "2024-12-31",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 411000.0,
+        "extracted_value": 411000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 21578.0,
+        "extracted_value": 21578.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 237400.0,
+        "extracted_value": 237400.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "P/L BIANCA",
+              "extracted_value": "P/L BIANCA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 162000.0,
+              "extracted_value": 162000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 162000.0,
+              "extracted_value": 162000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "P/L CHICAGO PIZZA",
+              "extracted_value": "P/L CHICAGO PIZZA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 212000.0,
+              "extracted_value": 212000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 212000.0,
+              "extracted_value": 212000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "PIZZA BOX L",
+              "extracted_value": "PIZZA BOX L"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 0.0,
+              "extracted_value": 0.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 0.0,
+              "extracted_value": 0.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.967,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "Sausage Crust (L)",
+              "extracted_value": "* Sausage Crust (L)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 37000.0,
+              "extracted_value": 37000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 20,
+      "wrong_value": 2,
+      "hallucinated": 1,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_009": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Solaria",
+        "extracted_value": "Solaria",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "396RC1122024/02790",
+        "extracted_value": "396RC1122024/02790",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2024-12-31",
+        "extracted_value": "2024-12-31",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 141821.0,
+        "extracted_value": 141821.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 28364.0,
+        "extracted_value": 28364.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 170100.0,
+        "extracted_value": 170100.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Chicken Cordon Bleu + French Fries Dan Salad",
+              "extracted_value": "Chicken Cordon Bleu + French Fries Dan Salad"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 48182.0,
+              "extracted_value": 48182.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 48182.0,
+              "extracted_value": 48182.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Chicken Cordon Bleu + Nasi Dan Salad",
+              "extracted_value": "Chicken Cordon Bleu + Nasi Dan Salad"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 48182.0,
+              "extracted_value": 48182.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 48182.0,
+              "extracted_value": 48182.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Goreng",
+              "extracted_value": "Nasi Goreng"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 31819.0,
+              "extracted_value": 31819.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 31819.0,
+              "extracted_value": 31819.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Goreng Sapi Cabe Ijo",
+              "extracted_value": "Nasi Goreng Sapi Cabe Ijo"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 41819.0,
+              "extracted_value": 41819.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 41819.0,
+              "extracted_value": 41819.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi Goreng Sosis",
+              "extracted_value": "Nasi Goreng Sosis"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 40910.0,
+              "extracted_value": 40910.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 40910.0,
+              "extracted_value": 40910.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Taro milk Shake",
+              "extracted_value": "Taro milk Shake"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 23637.0,
+              "extracted_value": 23637.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 23637.0,
+              "extracted_value": 23637.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 6,
+          "extracted_index": 6,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Thai Tea",
+              "extracted_value": "Thai Tea"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 20001.0,
+              "extracted_value": 20001.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 20001.0,
+              "extracted_value": 20001.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 7,
+          "extracted_index": 7,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Milk Shake Vanilla",
+              "extracted_value": "Milk Shake Vanilla"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 20001.0,
+              "extracted_value": 20001.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 20001.0,
+              "extracted_value": 20001.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 8,
+          "extracted_index": 8,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Es Teh Manis",
+              "extracted_value": "Es Teh Manis"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 9091.0,
+              "extracted_value": 9091.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 9091.0,
+              "extracted_value": 9091.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 43,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_010": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Indomaret Fresh Manyar Tirtoyoso",
+        "extracted_value": "Indomaret Fresh",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "wrong_value",
+        "ground_truth_value": "T1NN-937",
+        "extracted_value": "4.0.25/T1NN-937/DIDIN/04",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-10-28",
+        "extracted_value": "2025-10-28",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 81818.0,
+        "extracted_value": 81818.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 8182.0,
+        "extracted_value": 8182.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 90000.0,
+        "extracted_value": 90000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "PC CRML MACCHIATO 1L",
+              "extracted_value": "PC CRML MACCHIATO 1L"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 90000.0,
+              "extracted_value": 90000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 90000.0,
+              "extracted_value": 90000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 10,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_011": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Indomaret Fresh Manyar Tirtoyoso",
+        "extracted_value": "Indomaret Fresh",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "T1NN-97349",
+        "extracted_value": "T1NN-97349",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-10-28",
+        "extracted_value": "2025-10-28",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "wrong_value",
+        "ground_truth_value": 32950.0,
+        "extracted_value": 35946.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 3954.0,
+        "extracted_value": 3954.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 39900.0,
+        "extracted_value": 39900.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "YOU C1000 LMN WTR500",
+              "extracted_value": "YOU C1000 LMN WTR500"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8800.0,
+              "extracted_value": 8800.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 26400.0,
+              "extracted_value": 26400.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "PUCUK TEH MLTI 1.3L",
+              "extracted_value": "PUCUK TEH MLTI 1.3L"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 13500.0,
+              "extracted_value": 13500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 13500.0,
+              "extracted_value": 13500.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 14,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_012": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Indomaret Surya Square",
+        "extracted_value": "Indomaret",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "wrong_value",
+        "ground_truth_value": "FSFL-915154",
+        "extracted_value": "10.08.26-21:12/4.4.2/FSFL-91554/MUTIA/02",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-10",
+        "extracted_value": "2026-08-10",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 11562.0,
+        "extracted_value": 11562.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 1387.0,
+        "extracted_value": 1387.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 11500.0,
+        "extracted_value": 11500.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "YC ADD TOP SAUS CHL",
+              "extracted_value": "YC ADD TOP SAUS CHL"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 1000.0,
+              "extracted_value": 1000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 1000.0,
+              "extracted_value": 1000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "PEDULI ANAK BANGSA",
+              "extracted_value": "PEDULI ANAK BANGSA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 100.0,
+              "extracted_value": 100.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 100.0,
+              "extracted_value": 100.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 0.6,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "YC SS BKR SAPI KEJU",
+              "extracted_value": "YC SS BKR SAPI KEJU"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 13000.0,
+              "extracted_value": 13000.0
+            },
+            "amount": {
+              "category": "wrong_value",
+              "ground_truth_value": 13000.0,
+              "extracted_value": 10400.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 17,
+      "wrong_value": 2,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_013": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "ARISON MM",
+        "extracted_value": "ARISON MM",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "827549",
+        "extracted_value": "827549",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-08-05",
+        "extracted_value": "2025-08-05",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 41500.0,
+        "extracted_value": 41500.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "ONGKOS KIRIM",
+              "extracted_value": "ONGKOS KIRIM"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 3000.0,
+              "extracted_value": 3000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 3000.0,
+              "extracted_value": 3000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.971,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "AQUA GALON ISI 19 LT",
+              "extracted_value": "AQUA GALON ISI 19 LT**"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 21000.0,
+              "extracted_value": 21000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 21000.0,
+              "extracted_value": 21000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 0.965,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CLUB GALON 19 LT",
+              "extracted_value": "CLUB GALON 19 LT**"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 17500.0,
+              "extracted_value": 17500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 17500.0,
+              "extracted_value": 17500.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 17,
+      "wrong_value": 2,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_014": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "FamilyMart",
+        "extracted_value": "FamilyMart",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "wrong_value",
+        "ground_truth_value": "9125073000290987",
+        "extracted_value": "9125073000290937",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2025-07-30",
+        "extracted_value": "2025-07-30",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 44955.0,
+        "extracted_value": 44955.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 4945.0,
+        "extracted_value": 4945.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 49900.0,
+        "extracted_value": 49900.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Abc Alk LR06 4BAA4S",
+              "extracted_value": "Abc Alk LR06 4BAA4S"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 49900.0,
+              "extracted_value": 49900.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 49900.0,
+              "extracted_value": 49900.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 10,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_015": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "TEGUH",
+        "extracted_value": "TEGUH",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "NT26070265",
+        "extracted_value": "NT26070265",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-07-20",
+        "extracted_value": "2026-07-20",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 1186500.0,
+        "extracted_value": 1186500.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "PLANK KALSI 30 POLOS",
+              "extracted_value": "PLANK KALSI 30 POLOS"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 7.0,
+              "extracted_value": 7.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 52000.0,
+              "extracted_value": 52000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 364000.0,
+              "extracted_value": 364000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SENG GALVALUM 030X60",
+              "extracted_value": "SENG GALVALUM 030X60"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 14.0,
+              "extracted_value": 14.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 45000.0,
+              "extracted_value": 45000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 630000.0,
+              "extracted_value": 630000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "DINABOL 08X40",
+              "extracted_value": "DINABOL 08X40"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 5.0,
+              "extracted_value": 5.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 2500.0,
+              "extracted_value": 2500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12500.0,
+              "extracted_value": 12500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SEKRUP SDS 2CM(500BJ)",
+              "extracted_value": "SEKRUP SDS 2CM(500BJ)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 140000.0,
+              "extracted_value": 140000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 140000.0,
+              "extracted_value": 140000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SEKRUP KALSI SDS 6X3(140BJ)",
+              "extracted_value": "SEKRUP KALSI SDS 6X3(140BJ)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 40000.0,
+              "extracted_value": 40000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 40000.0,
+              "extracted_value": 40000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 27,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_016": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Depo Bangunan",
+        "extracted_value": "Depo Bangunan",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "63195024",
+        "extracted_value": "63195024",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-07-16",
+        "extracted_value": "2026-07-16",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 51163.0,
+        "extracted_value": 51163.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 5628.0,
+        "extracted_value": 5628.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 56791.0,
+        "extracted_value": 56791.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "BRAIDED BDH-104 40 CM FLEXIBLE",
+              "extracted_value": "BRAIDED BDH-104 40 CM FLEXIBLE"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 61000.0,
+              "extracted_value": 61000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 56791.0,
+              "extracted_value": 56791.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 11,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_017": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "TEGUH",
+        "extracted_value": "TEGUH",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "KS26070875",
+        "extracted_value": "KS26070875",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-07-23",
+        "extracted_value": "2026-07-23",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": null,
+        "extracted_value": null,
+        "ground_truth_status": "not_present",
+        "extracted_status": "not_present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 102000.0,
+        "extracted_value": 102000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SEKRUP SDS 2CM(100BJ) - DOZ",
+              "extracted_value": "SEKRUP SDS 2CM(100BJ) - DOZ"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 45000.0,
+              "extracted_value": 45000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 90000.0,
+              "extracted_value": 90000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "SOK 4\" DV PVC - BIJI",
+              "extracted_value": "SOK 4\" DV PVC - BIJI"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 15,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_018": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Depo Bangunan",
+        "extracted_value": "Depo Bangunan",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "63200623",
+        "extracted_value": "63200623",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-06",
+        "extracted_value": "2026-08-06",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 1807234.0,
+        "extracted_value": 1807234.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 198796.0,
+        "extracted_value": 198796.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 2006030.0,
+        "extracted_value": 2006030.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "FLEXI SUPER BLUE 5/8IN -10M",
+              "extracted_value": "FLEXI SUPER BLUE 5/8IN -10M"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 94000.0,
+              "extracted_value": 94000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 92120.0,
+              "extracted_value": 92120.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "PORKLIN HEAVY DUTY NON PERFUME",
+              "extracted_value": "PORKLIN HEAVY DUTY NON PERFUME"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 25000.0,
+              "extracted_value": 25000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 24500.0,
+              "extracted_value": 24500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "VALE KW1 1.44M2 CREAM",
+              "extracted_value": "VALE KW1 1.44M2 CREAM"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 10.0,
+              "extracted_value": 10.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 188500.0,
+              "extracted_value": 188500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 1847300.0,
+              "extracted_value": 1847300.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "WAREHOUSE NOTICE",
+              "extracted_value": "WAREHOUSE NOTICE"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.98,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "INB007 7W LED BULB DAYL PACK/3",
+              "extracted_value": "INBO07 7W LED BULB DAYL PACK/3"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 52400.0,
+              "extracted_value": 52400.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 42109.0,
+              "extracted_value": 42109.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 26,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_019": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "extracted_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "S.260828.00002.002455",
+        "extracted_value": "S.260828.00002.002455",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-28",
+        "extracted_value": "2026-08-28",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 137837.0,
+        "extracted_value": 137837.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 15162.0,
+        "extracted_value": 15162.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 153000.0,
+        "extracted_value": 153000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "THINNER PIRANHA-B 1LTR",
+              "extracted_value": "THINNER PIRANHA-B 1LTR"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 21000.0,
+              "extracted_value": 21000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 21000.0,
+              "extracted_value": 21000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "DENPUL ALFAGLOSS-0,25KG+HARD",
+              "extracted_value": "DENPUL ALFAGLOSS-0,25KG+HARD"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 20000.0,
+              "extracted_value": 20000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 20000.0,
+              "extracted_value": 20000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 0.968,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "KUAS HOME CARE 1,5*",
+              "extracted_value": "KUAS HOME CARE 1,5\""
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 0.968,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "KUAS HOME CARE 2,5*",
+              "extracted_value": "KUAS HOME CARE 2,5\""
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.965,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "KUAS HOME CARE 2*",
+              "extracted_value": "KUAS HOME CARE 2\""
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 0.961,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "AVIAN 0.9L-MATT SUPER BLACK SBM",
+              "extracted_value": "AVIAN 0.9L-MATT SUPER BLACK SPX"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 88000.0,
+              "extracted_value": 88000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 88000.0,
+              "extracted_value": 88000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 27,
+      "wrong_value": 4,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_020": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "Rasha Van Java",
+        "extracted_value": "Rasha Van Java",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "RVJ202609060015",
+        "extracted_value": "RVJ202609060015",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-09-06",
+        "extracted_value": "2026-09-06",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 1221500.0,
+        "extracted_value": 1208000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 28350.0,
+        "extracted_value": 28350.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 1249850.0,
+        "extracted_value": 1249850.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "DAHLIA 938K",
+              "extracted_value": "DAHLIA 938K"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 938000.0,
+              "extracted_value": 938000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 938000.0,
+              "extracted_value": 938000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Ayam Karamel Mentega Bawang",
+              "extracted_value": "Ayam Karamel Mentega Bawang"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 60000.0,
+              "extracted_value": 60000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 60000.0,
+              "extracted_value": 60000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Terong Sambal",
+              "extracted_value": "Terong Sambal"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 38000.0,
+              "extracted_value": 38000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 38000.0,
+              "extracted_value": 38000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Gurami Saos Thai",
+              "extracted_value": "Gurami Saos Thai"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 108000.0,
+              "extracted_value": 108000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 108000.0,
+              "extracted_value": 108000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Es Jeruk Manis",
+              "extracted_value": "Es Jeruk Manis"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 22000.0,
+              "extracted_value": 22000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 22000.0,
+              "extracted_value": 22000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Mineral Water",
+              "extracted_value": "Mineral Water"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 30000.0,
+              "extracted_value": 30000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 6,
+          "extracted_index": 6,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Teh Melati Rasa",
+              "extracted_value": "Teh Melati Rasa"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 35,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_021": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "extracted_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "S.260807.00002.000642",
+        "extracted_value": "S.260807.00002.000642",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-07",
+        "extracted_value": "2026-08-07",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 162162.0,
+        "extracted_value": 162162.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 17838.0,
+        "extracted_value": 17838.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 180000.0,
+        "extracted_value": 180000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AVIAN 0.9L-SUPER WHITE SW",
+              "extracted_value": "AVIAN 0.9L-SUPER WHITE SW"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 88000.0,
+              "extracted_value": 88000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 88000.0,
+              "extracted_value": 88000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 0.988,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "THINNER ECERAN-A SPESIAL",
+              "extracted_value": "THINNER ECERAN- A SPESIAL"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 4.0,
+              "extracted_value": 4.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 23000.0,
+              "extracted_value": 23000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 92000.0,
+              "extracted_value": 92000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 14,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_022": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "extracted_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "S.260822.00002.002012",
+        "extracted_value": "S.260822.00002.002012",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-22",
+        "extracted_value": "2026-08-22",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 212612.0,
+        "extracted_value": 212612.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 23387.0,
+        "extracted_value": 23387.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 236000.0,
+        "extracted_value": 236000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AVIAN 0.9L-EVERGREEN 650",
+              "extracted_value": "AVIAN 0.9L-EVERGREEN 650"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 88000.0,
+              "extracted_value": 88000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 176000.0,
+              "extracted_value": 176000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "AMPLAS METERAN PRIMERO-100",
+              "extracted_value": "AMPLAS METERAN PRIMERO-100"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 9000.0,
+              "extracted_value": 9000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 9000.0,
+              "extracted_value": 9000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "KUAS HOME CARE 1,5\"",
+              "extracted_value": "KUAS HOME CARE 1,5\""
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "MAJUN WARNA",
+              "extracted_value": "MAJUN WARNA"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 10000.0,
+              "extracted_value": 10000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "THINNER PIRANHA-B 1LTR",
+              "extracted_value": "THINNER PIRANHA-B 1LTR"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 21000.0,
+              "extracted_value": 21000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 21000.0,
+              "extracted_value": 21000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "KAPI GAGANG KARET 2\"",
+              "extracted_value": "KAPI GAGANG KARET 2\""
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 31,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_023": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "extracted_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "S.260828.00002.002456",
+        "extracted_value": "S.260828.00002.002456",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-28",
+        "extracted_value": "2026-08-28",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 21621.0,
+        "extracted_value": 21621.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 2378.0,
+        "extracted_value": 2378.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 24000.0,
+        "extracted_value": 24000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "FLAP DISC PRIMERO ECER-NO 80",
+              "extracted_value": "FLAP DISC PRIMERO ECER-NO 80"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 24000.0,
+              "extracted_value": 24000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 11,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_024": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "extracted_value": "PM Mart Rungkut - CV Putra Mas Ultima",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "S.260810.00002.000948",
+        "extracted_value": "S.260810.00002.000948",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "wrong_value",
+        "ground_truth_value": "2026-08-10",
+        "extracted_value": "2024-08-10",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 224324.0,
+        "extracted_value": 224324.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 24676.0,
+        "extracted_value": 24676.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 249000.0,
+        "extracted_value": 249000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "ESSENCE TOUGH SHIELD MATT-GALON BASE C",
+              "extracted_value": "ESSENCE TOUGH SHIELD MATT-GALON BASE C"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 243000.0,
+              "extracted_value": 243000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 243000.0,
+              "extracted_value": 243000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "KUAS HOME CARE 1,5\"",
+              "extracted_value": "KUAS HOME CARE 1,5\""
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6000.0,
+              "extracted_value": 6000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 14,
+      "wrong_value": 1,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_025": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "BON AMI BAKERY",
+        "extracted_value": "BON AMI BAKERY",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "correct",
+        "ground_truth_value": "17495-001-0009",
+        "extracted_value": "17495-001-0009",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-08-18",
+        "extracted_value": "2026-08-18",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 66666.0,
+        "extracted_value": 66666.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 7333.0,
+        "extracted_value": 7333.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 74000.0,
+        "extracted_value": 74000.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Long Cheesy",
+              "extracted_value": "Long Cheesy"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 16000.0,
+              "extracted_value": 16000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 16000.0,
+              "extracted_value": 16000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Roti Kukus",
+              "extracted_value": "Roti Kukus"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 12000.0,
+              "extracted_value": 12000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Mix Fruit Pudding",
+              "extracted_value": "Mix Fruit Pudding"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 2.0,
+              "extracted_value": 2.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 15000.0,
+              "extracted_value": 15000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 30000.0,
+              "extracted_value": 30000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Soes Coklat",
+              "extracted_value": "Soes Coklat"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 16000.0,
+              "extracted_value": 16000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Roti Abon Ayam",
+              "extracted_value": "Roti Abon Ayam"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 16000.0,
+              "extracted_value": 16000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8000.0,
+              "extracted_value": 8000.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 27,
+      "wrong_value": 0,
+      "hallucinated": 0,
+      "wrongly_abstained": 0,
+      "missed_status": 0
+    }
+  },
+  "receipt_026": {
+    "status": "scored",
+    "fields": {
+      "vendor_name": {
+        "category": "correct",
+        "ground_truth_value": "HYPERMART AR HAKIM",
+        "extracted_value": "HYPERMART AR HAKIM",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "receipt_number": {
+        "category": "wrong_value",
+        "ground_truth_value": "498030",
+        "extracted_value": "6926",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "currency": {
+        "category": "correct",
+        "ground_truth_value": "IDR",
+        "extracted_value": "IDR",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "transaction_date": {
+        "category": "correct",
+        "ground_truth_value": "2026-07-04",
+        "extracted_value": "2026-07-04",
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "subtotal": {
+        "category": "correct",
+        "ground_truth_value": 228405.0,
+        "extracted_value": 228405.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "tax": {
+        "category": "correct",
+        "ground_truth_value": 25125.0,
+        "extracted_value": 25125.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      },
+      "total": {
+        "category": "correct",
+        "ground_truth_value": 253530.0,
+        "extracted_value": 253530.0,
+        "ground_truth_status": "present",
+        "extracted_status": "present"
+      }
+    },
+    "line_items": {
+      "matched": [
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "SARIMI DUA SOTO 113G",
+              "extracted_value": "36008187 SARIMI DUA SOTO 113G"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 4390.0,
+              "extracted_value": 4390.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 4140.0,
+              "extracted_value": 4140.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DRINK YGHT GR",
+              "extracted_value": "61813394 CIMORY DRINK YGHT GR"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 7890.0,
+              "extracted_value": 7890.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6850.0,
+              "extracted_value": 6850.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 6,
+          "extracted_index": 6,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DRINK YGHT LE",
+              "extracted_value": "61814893 CIMORY DRINK YGHT LE"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 7890.0,
+              "extracted_value": 7890.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6850.0,
+              "extracted_value": 6850.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 9,
+          "extracted_index": 9,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "KG MALKIST ABONCR125",
+              "extracted_value": "36548031 KG MALKIST ABONCR125"
+            },
+            "quantity": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 1.0,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 9890.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 9890.0,
+              "extracted_value": 9890.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 11,
+          "extracted_index": 11,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DRINK YGHT ST",
+              "extracted_value": "61813429 CIMORY DRINK YGHT ST"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 7890.0,
+              "extracted_value": 7890.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6850.0,
+              "extracted_value": 6850.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 12,
+          "extracted_index": 12,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "SARIMI DUA RASA BASO",
+              "extracted_value": "36010414 SARIMI DUA RASA BASO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 4290.0,
+              "extracted_value": 4290.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 4040.0,
+              "extracted_value": 4040.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 13,
+          "extracted_index": 13,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "POTABEE BARBEQUE 65G",
+              "extracted_value": "36447391 POTABEE BARBEQUE 65G"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 10490.0,
+              "extracted_value": 10490.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 9500.0,
+              "extracted_value": 9500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 18,
+          "extracted_index": 18,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DRINK YGHT BL",
+              "extracted_value": "61823141 CIMORY DRINK YGHT BL"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 7890.0,
+              "extracted_value": 7890.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6850.0,
+              "extracted_value": 6850.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 19,
+          "extracted_index": 19,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "INDOMIE KARI AYAM 72",
+              "extracted_value": "36038369 INDOMIE KARI AYAM 72"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 5.0,
+              "extracted_value": 5.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 3190.0,
+              "extracted_value": 3190.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 15950.0,
+              "extracted_value": 15950.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 20,
+          "extracted_index": 20,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "SUNLIGHT LIME PC1500",
+              "extracted_value": "35703007 SUNLIGHT LIME PC1500"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 22390.0,
+              "extracted_value": 22390.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 19500.0,
+              "extracted_value": 19500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 21,
+          "extracted_index": 21,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "SARIMI DUA GORENG AY",
+              "extracted_value": "36009828 SARIMI DUA GORENG AY"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 4.0,
+              "extracted_value": 4.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 4190.0,
+              "extracted_value": 4190.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 15760.0,
+              "extracted_value": 15760.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 22,
+          "extracted_index": 22,
+          "match_score": 0.89,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "E COMM HYPERMART ONL",
+              "extracted_value": "98511016 E COMM HYPERMART ONL"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 0.0,
+              "extracted_value": 0.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 0.885,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "MAYUMI MAYO SCH100G",
+              "extracted_value": "36328546 MAYUMI MAYO SCH100G"
+            },
+            "quantity": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 1.0,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 8290.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8290.0,
+              "extracted_value": 8290.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 7,
+          "extracted_index": 7,
+          "match_score": 0.885,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "SARIMIE GORENG AYAM",
+              "extracted_value": "36017980 SARIMIE GORENG AYAM"
+            },
+            "quantity": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 1.0,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 4190.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 4190.0,
+              "extracted_value": 4190.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 0.88,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "TANGO WFR CHO 100G",
+              "extracted_value": "36512328 TANGO WFR CHO 100G"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8690.0,
+              "extracted_value": 8690.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6900.0,
+              "extracted_value": 6900.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 17,
+          "extracted_index": 17,
+          "match_score": 0.88,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "DAHLIA TEH KTR 75G",
+              "extracted_value": "35681639 DAHLIA TEH KTR 75G"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 14190.0,
+              "extracted_value": 14190.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 36180.0,
+              "extracted_value": 36180.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 14,
+          "extracted_index": 14,
+          "match_score": 0.874,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "MALKIST ABON 126G",
+              "extracted_value": "36517645 MALKIST ABON 126G"
+            },
+            "quantity": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 1.0,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 7390.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 7390.0,
+              "extracted_value": 7390.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 0.868,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "LOKO TOAST BREAD",
+              "extracted_value": "92100668 LOKO TOAST BREAD"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 34000.0,
+              "extracted_value": 34000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 27500.0,
+              "extracted_value": 27500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 16,
+          "extracted_index": 16,
+          "match_score": 0.868,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "JF CRINKLE 900GR",
+              "extracted_value": "69903255 JF CRINKLE 900GR"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 44990.0,
+              "extracted_value": 44990.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 29900.0,
+              "extracted_value": 29900.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 0.854,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "61835174 CIMORY DY ZERO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 8590.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 8,
+          "extracted_index": 8,
+          "match_score": 0.854,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "61835209 CIMORY DY ZERO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 8590.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 10,
+          "extracted_index": 10,
+          "match_score": 0.854,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "61835183 CIMORY DY ZERO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 8590.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 15,
+          "extracted_index": 15,
+          "match_score": 0.854,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "61835192 CIMORY DY ZERO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 8590.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        }
+      ],
+      "unmatched_ground_truth": [],
+      "unmatched_extracted": []
+    },
+    "category_counts": {
+      "correct": 67,
+      "wrong_value": 24,
+      "hallucinated": 0,
+      "wrongly_abstained": 8,
+      "missed_status": 0
+    }
+  }
+}
