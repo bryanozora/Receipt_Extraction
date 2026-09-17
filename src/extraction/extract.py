@@ -34,6 +34,19 @@ The prompt is split into a system instruction (stable extraction rules:
 schema shape, anti-hallucination, normalization) and a short per-call user
 message, rather than folding everything into one block of text.
 
+Prompt refinements from Step 6 sample testing
+------------------------------------------------
+Five rules were added to the system instruction after real failures surfaced
+during Step 6 sample testing (not hypothetical edge cases), kept here for
+traceability: careful digit-by-digit year reading (a rotated receipt was
+misread as 2024 instead of 2026), including occluded-but-visibly-present
+line items as illegible rather than silently dropping the row, treating a
+percentage discount line as modifying the preceding item's amount rather
+than becoming its own line item, preferring printed vendor text over a
+brand logo, and resolving subtotal ambiguity when a receipt prints both a
+pre-tax "DPP" and a separately labeled "Subtotal" by checking which value
+is arithmetically consistent with tax + total.
+
 Resilience: low-confidence success vs. hard failure
 -----------------------------------------------------
 These are two different things and this module keeps them distinct:
@@ -116,6 +129,23 @@ If a value is not clearly visible, do not invent a plausible-looking value. Set 
 receipt. This includes subtotal/tax/total: if one of these three is genuinely not printed on \
 the receipt, mark it "not_present" rather than computing it yourself from the other two.
 
+## Vendor name
+When a receipt shows both an explicit printed store name/label (e.g. a "STORE:" line, a header, \
+or an address block naming the store) and a separate brand/franchise logo that might differ from \
+it, prefer the printed text for vendor_name. Only infer the vendor from a logo when there is no \
+legible printed store name anywhere on the receipt, and note the lower confidence in "reason" \
+when you do.
+
+## Subtotal ambiguity (e.g. "DPP" vs. a separately printed "Subtotal")
+Some receipts print more than one value that could plausibly be "subtotal" -- for example both \
+"DPP" (the pre-tax base amount) and a separately labeled "Subtotal" line, which are not always \
+the same thing (a printed "Subtotal" sometimes already includes tax). This schema's subtotal \
+field means the pre-tax amount. When more than one candidate value is present, prefer whichever \
+one, added to tax, comes closest to matching total -- that is the mathematically consistent \
+pre-tax figure. If "DPP" is present and satisfies this check, prefer it by name. If the check is \
+ambiguous or no candidate fits well, use your best judgment, lower your confidence on subtotal, \
+and note the ambiguity in reason.
+
 ## Normalization
 - Currency amounts: strip currency symbols ("Rp", "IDR", etc.) and separators, and return a \
 plain number. Indonesian Rupiah amounts do not use fractional/decimal subunits in practice, so \
@@ -123,7 +153,9 @@ treat any "." or "," inside an amount as a thousands separator, never a decimal 
 "Rp 45.000", "45,000", and "45.000,00" must all normalize to 45000.0, not 45.0 or misread as \
 having cents.
 - Dates: receipts use DD/MM/YYYY or DD-MM-YYYY format. Convert to ISO YYYY-MM-DD. Do not swap \
-day and month.
+day and month. Read all four digits of the year carefully rather than assuming or guessing the \
+decade/century -- a rotated, skewed, or low-quality image increases the risk of misreading a \
+single digit, so check the year digit-by-digit rather than pattern-matching to a "typical" year.
 - "currency": the currency code, e.g. "IDR". Infer it from context (symbols, language) if it \
 isn't printed explicitly, and lower your confidence accordingly.
 
@@ -133,6 +165,18 @@ appear on the receipt. If a row states an amount but not an explicit quantity or
 mark quantity/unit_price as "not_present" rather than assuming a quantity of 1. If a receipt has \
 no itemized table at all, return an empty line_items list rather than inventing a single generic \
 row.
+
+If part of a line item is obscured (by handwriting, a stamp, a fold, or similar) but there is \
+visible evidence the row exists (e.g. a partial line, a stray price, or a gap in the item \
+sequence), still include it in line_items: fill in whichever fields you can read, and set \
+status="illegible" on the ones you cannot. Never silently omit a row that is visibly present \
+just because part of it is unreadable.
+
+If a receipt shows a discount as a percentage or amount on its own line directly below an item \
+(e.g. "Disc 5%") and no separate final discounted price is printed for that item, do not create \
+a separate line_items entry for the discount line itself. Instead, treat it as modifying the \
+item immediately above it: compute that item's amount as the post-discount total, and lower \
+confidence and note the computation in reason if the arithmetic is uncertain.
 
 ## Multi-image receipts
 Sometimes you will be given more than one image in a single request. When that happens, the \
@@ -340,7 +384,8 @@ def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction | Extract
 
 
 if __name__ == "__main__":
-    receipt_numbers = ["014", "016", "018", "019", "025"]
+    # "014", "016", "018", 
+    receipt_numbers = ["019", "025"]
     output_dir = os.path.join("outputs", "sample_runs")
     os.makedirs(output_dir, exist_ok=True)
 

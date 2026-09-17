@@ -333,9 +333,50 @@ Found and fixed a real crash risk: if Gemini blocks or refuses to generate outpu
 
 Verified via test\_resilience.py scenario 4 (mocked, since safety blocks aren't reliably triggerable on demand): confirmed ExtractionError(failure\_stage="api\_failure", message="Gemini returned no output (finish\_reason=FinishReason.SAFETY)") is returned cleanly instead of crashing.
 
-&nbsp;
+**Step 6 — Sample test & iterate**  
+Tested 5 harder samples not covered in earlier steps: receipt\_16 (rotated 90°, folded), receipt\_18 (same vendor as 16, has handwritten marks), receipt\_19 (has DPP \+ subtotal \+ tax as three distinct fields), receipt\_14 (partially covered by a stamp, vendor shown as both logo that is easy to read and printed text), receipt\_25 (PPN 11%, non-standard rate, receipt folded, text starting to disappear).
 
-&nbsp;
+**Real bugs found, worth fixing:**
+
+receipt\_16: transaction year misread as 2024 instead of the correct 2026 — a genuine digit misread, not a format confusion. The receipt is rotated 90 degrees, might have some connection to this misread
+
+receipt\_18: a line item partially covered by handwriting was dropped entirely from line\_items rather than being included with fields marked illegible — no trace of it remains in the output at all.
+
+receipt\_16, 18: discount lines shown as a percentage (e.g. "Disc 5%") with no final discounted price are consistently extracted as their own separate line item, rather than being applied to the item they discount. Consistent across 2 receipts, not a one-off.
+
+**Design decisions needed, not bugs:**
+
+receipt\_14: vendor name extracted from a recognizable logo (Family Mart) instead of the receipt's own printed label ("STORE: FMI MART SURABAYA"). Defensible either way, but inconsistent with what a ground truth reader would naturally transcribe.&nbsp;
+
+Decided: prefer printed text over logo inference going forward.
+
+receipt\_16 vs receipt\_18: same vendor, same layout/language, but DPP was correctly read as subtotal on 18 and missed (returned not\_present) on 16\. Likely inherent model variance or because receipt 16’s photo is rotated. Noted, not chased
+
+receipt\_19: this receipt prints DPP, subtotal, AND tax as three separate values, where the printed "subtotal" already includes tax and DPP is the true pre-tax amount. The model mapped subtotal to our schema's subtotal field — arguably incorrect for our schema's intent (pre-tax), but flags that "subtotal" terminology is overloaded and ambiguous across receipts when multiple candidates exist. To be fixed in Step 6: add a consistency check to the prompt — when multiple subtotal candidates exist, prefer whichever value, when added to tax, comes closest to matching total (the mathematically consistent pre-tax figure), rather than relying on label-matching alone.
+
+receipt\_25: vendor name read correctly from printed text (logo apparently unclear/hard to recognize here) — consistent with the "prefer printed text" decision above, not a separate issue.
+
+**Working correctly, no action needed:**
+
+receipt\_16, 18: PPN correctly recognized as tax without any explicit prompt mention — no fix needed here.
+
+receipt\_14: stamp did not obscure any extracted fields — no issue, positioned away from relevant info.
+
+receipt\_19: folded portion of the receipt read correctly (though likely helped by quantity=1, so amount equals unit price — not necessarily proof of fold robustness in general).
+
+**Fixes**
+
+Added five rules to the system instruction addressing the findings above: explicit year-reading care, including occluded line items with illegible fields instead of dropping them, folding discount lines into the discounted item's amount, preferring printed vendor text over logo inference, and a math-based consistency check (prefer whichever subtotal candidate, when added to tax, comes closest to matching total) to resolve DPP-vs-subtotal ambiguity.
+
+Re-tested receipt\_016, receipt\_018, receipt\_019, receipt\_014, and receipt\_025, checked against the physical receipts (not just JSON output):
+
+receipt\_016: year now correctly reads 2026; discount math confirmed correct against the physical receipt.
+
+receipt\_018: the previously-dropped, handwriting-covered item now appears — and better than expected, it's read correctly rather than just marked illegible. Discount consolidation confirmed correct, including the item with two stacked discounts.
+
+receipt\_019: subtotal now correctly resolves to the DPP-derived value rather than the tax-inclusive "subtotal" line, matching what's physically more accurate. The small rounding gap between subtotal+tax and total is real, present on the receipt itself, not a system error.
+
+receipt\_14: vendor name still resolves to the FamilyMart logo rather than the smaller printed label. Checked against the physical receipt — the logo itself is large, legible stylized text positioned more prominently than the plain label below it, so this is judged as acceptable rather than a rule failure: the underlying intent (prefer clearly legible text, don't guess from an ambiguous logo) is still satisfied. receipt\_025 confirms the fallback direction works as intended — an unclear logo there correctly led to reading the printed text instead.
 
 &nbsp;
 

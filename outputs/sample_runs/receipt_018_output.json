@@ -7,7 +7,7 @@
   },
   "transaction_date": {
     "value": "2026-08-06",
-    "confidence": 0.9,
+    "confidence": 0.95,
     "status": "present",
     "reason": null
   },
@@ -25,7 +25,7 @@
   },
   "subtotal": {
     "value": 1807234.0,
-    "confidence": 0.95,
+    "confidence": 0.98,
     "status": "present",
     "reason": null
   },
@@ -37,14 +37,14 @@
   },
   "total": {
     "value": 2006030.0,
-    "confidence": 0.98,
+    "confidence": 0.99,
     "status": "present",
     "reason": null
   },
   "line_items": [
     {
       "description": {
-        "value": "AIR000100230002 5/8\" FLEXI SUPER BLUE 5/8IN -10M",
+        "value": "FLEXI SUPER BLUE 5/8IN -10M",
         "confidence": 0.95,
         "status": "present",
         "reason": null
@@ -62,41 +62,15 @@
         "reason": null
       },
       "amount": {
-        "value": 94000.0,
-        "confidence": 0.98,
+        "value": 92120.0,
+        "confidence": 0.95,
         "status": "present",
-        "reason": null
+        "reason": "Amount computed as original price (94,000) minus discount (1,880)."
       }
     },
     {
       "description": {
-        "value": "DISC 2.00%",
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "quantity": {
-        "value": null,
-        "confidence": 0.0,
-        "status": "not_present",
-        "reason": "Discount line has no quantity printed."
-      },
-      "unit_price": {
-        "value": -1880.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "amount": {
-        "value": -1880.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      }
-    },
-    {
-      "description": {
-        "value": "INLI0050530 INB007 7W LED BULB DAYL PACK/3",
+        "value": "INB007 7W LED BULB DAYL PACK/3",
         "confidence": 0.95,
         "status": "present",
         "reason": null
@@ -114,67 +88,15 @@
         "reason": null
       },
       "amount": {
-        "value": 52400.0,
-        "confidence": 0.98,
+        "value": 42109.0,
+        "confidence": 0.95,
         "status": "present",
-        "reason": null
+        "reason": "Amount computed as original price (52,400) minus discounts (9,432 and 859)."
       }
     },
     {
       "description": {
-        "value": "DISC 18.00%",
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "quantity": {
-        "value": null,
-        "confidence": 0.0,
-        "status": "not_present",
-        "reason": "Discount line has no quantity printed."
-      },
-      "unit_price": {
-        "value": -9432.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "amount": {
-        "value": -9432.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      }
-    },
-    {
-      "description": {
-        "value": "DISC 2.00%",
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "quantity": {
-        "value": null,
-        "confidence": 0.0,
-        "status": "not_present",
-        "reason": "Discount line has no quantity printed."
-      },
-      "unit_price": {
-        "value": -859.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "amount": {
-        "value": -859.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      }
-    },
-    {
-      "description": {
-        "value": "PRIM00100480001 850ML PORKLIN HEAVY DUTY NON PERFUME",
+        "value": "PORKLIN HEAVY DUTY NON PERFUME",
         "confidence": 0.95,
         "status": "present",
         "reason": null
@@ -192,41 +114,15 @@
         "reason": null
       },
       "amount": {
-        "value": 25000.0,
-        "confidence": 0.98,
+        "value": 24500.0,
+        "confidence": 0.95,
         "status": "present",
-        "reason": null
+        "reason": "Amount computed as original price (25,000) minus discount (500)."
       }
     },
     {
       "description": {
-        "value": "DISC 2.00%",
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "quantity": {
-        "value": null,
-        "confidence": 0.0,
-        "status": "not_present",
-        "reason": "Discount line has no quantity printed."
-      },
-      "unit_price": {
-        "value": -500.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "amount": {
-        "value": -500.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      }
-    },
-    {
-      "description": {
-        "value": "SEREN0301800005 60X60CM VALE KW1 1.44M2 CREAM",
+        "value": "VALE KW1 1.44M2 CREAM",
         "confidence": 0.95,
         "status": "present",
         "reason": null
@@ -244,41 +140,15 @@
         "reason": null
       },
       "amount": {
-        "value": 1885000.0,
-        "confidence": 0.98,
+        "value": 1847300.0,
+        "confidence": 0.95,
         "status": "present",
-        "reason": null
+        "reason": "Amount computed as gross total (1,885,000) minus total discount (37,700)."
       }
     },
     {
       "description": {
-        "value": "DISC 2.00%",
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "quantity": {
-        "value": null,
-        "confidence": 0.0,
-        "status": "not_present",
-        "reason": "Discount line has no quantity printed."
-      },
-      "unit_price": {
-        "value": -3770.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      },
-      "amount": {
-        "value": -37700.0,
-        "confidence": 0.98,
-        "status": "present",
-        "reason": null
-      }
-    },
-    {
-      "description": {
-        "value": "WAREHOUSE NOTICE WAREHOUSE NOTICE",
+        "value": "WAREHOUSE NOTICE",
         "confidence": 0.95,
         "status": "present",
         "reason": null
@@ -291,7 +161,7 @@
       },
       "unit_price": {
         "value": 1.0,
-        "confidence": 0.98,
+        "confidence": 0.9,
         "status": "present",
         "reason": null
       },

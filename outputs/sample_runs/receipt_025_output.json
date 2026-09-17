@@ -1,13 +1,13 @@
 {
   "vendor_name": {
     "value": "BON AMI BAKERY",
-    "confidence": 0.99,
+    "confidence": 0.98,
     "status": "present",
     "reason": null
   },
   "transaction_date": {
     "value": "2026-08-18",
-    "confidence": 0.99,
+    "confidence": 0.98,
     "status": "present",
     "reason": null
   },
@@ -19,25 +19,25 @@
   },
   "currency": {
     "value": "IDR",
-    "confidence": 0.99,
+    "confidence": 0.98,
     "status": "present",
     "reason": null
   },
   "subtotal": {
     "value": 66666.0,
-    "confidence": 0.98,
+    "confidence": 0.95,
     "status": "present",
     "reason": null
   },
   "tax": {
     "value": 7333.0,
-    "confidence": 0.98,
+    "confidence": 0.95,
     "status": "present",
     "reason": null
   },
   "total": {
     "value": 74000.0,
-    "confidence": 0.99,
+    "confidence": 0.98,
     "status": "present",
     "reason": null
   },
@@ -45,25 +45,25 @@
     {
       "description": {
         "value": "Long Cheesy",
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "quantity": {
         "value": 1.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "unit_price": {
         "value": 16000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "amount": {
         "value": 16000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       }
@@ -71,25 +71,25 @@
     {
       "description": {
         "value": "Roti Kukus",
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "quantity": {
         "value": 1.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "unit_price": {
         "value": 12000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "amount": {
         "value": 12000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       }
@@ -97,25 +97,25 @@
     {
       "description": {
         "value": "Mix Fruit Pudding",
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "quantity": {
         "value": 2.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "unit_price": {
         "value": 15000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "amount": {
         "value": 30000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       }
@@ -123,25 +123,25 @@
     {
       "description": {
         "value": "Soes Coklat",
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "quantity": {
         "value": 1.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "unit_price": {
         "value": 16000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "amount": {
         "value": 8000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       }
@@ -149,25 +149,25 @@
     {
       "description": {
         "value": "Roti Abon Ayam",
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "quantity": {
         "value": 1.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "unit_price": {
         "value": 16000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       },
       "amount": {
         "value": 8000.0,
-        "confidence": 0.99,
+        "confidence": 0.98,
         "status": "present",
         "reason": null
       }

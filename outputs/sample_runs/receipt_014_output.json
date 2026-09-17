@@ -1,19 +1,19 @@
 {
   "vendor_name": {
     "value": "FamilyMart",
-    "confidence": 0.99,
+    "confidence": 0.98,
     "status": "present",
     "reason": null
   },
   "transaction_date": {
     "value": "2025-07-30",
-    "confidence": 0.98,
+    "confidence": 0.99,
     "status": "present",
     "reason": null
   },
   "receipt_number": {
     "value": "9125073000290937",
-    "confidence": 0.98,
+    "confidence": 0.99,
     "status": "present",
     "reason": null
   },
@@ -51,19 +51,19 @@
       },
       "quantity": {
         "value": 1.0,
-        "confidence": 0.98,
+        "confidence": 0.99,
         "status": "present",
         "reason": null
       },
       "unit_price": {
         "value": 49900.0,
-        "confidence": 0.98,
+        "confidence": 0.99,
         "status": "present",
         "reason": null
       },
       "amount": {
         "value": 49900.0,
-        "confidence": 0.98,
+        "confidence": 0.99,
         "status": "present",
         "reason": null
       }

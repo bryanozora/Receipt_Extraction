@@ -1,0 +1,125 @@
+{
+  "vendor_name": {
+    "value": "Depo Bangunan",
+    "confidence": 0.95,
+    "status": "present",
+    "reason": null
+  },
+  "transaction_date": {
+    "value": "2024-07-16",
+    "confidence": 0.9,
+    "status": "present",
+    "reason": null
+  },
+  "receipt_number": {
+    "value": "63195024",
+    "confidence": 0.95,
+    "status": "present",
+    "reason": null
+  },
+  "currency": {
+    "value": "IDR",
+    "confidence": 0.95,
+    "status": "present",
+    "reason": null
+  },
+  "subtotal": {
+    "value": null,
+    "confidence": 0.0,
+    "status": "not_present",
+    "reason": "Subtotal is not explicitly printed on the receipt."
+  },
+  "tax": {
+    "value": 5628.0,
+    "confidence": 0.95,
+    "status": "present",
+    "reason": null
+  },
+  "total": {
+    "value": 56791.0,
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "BRAIDED BDH-104 40 CM FLEXIBLE",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 61000.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 61000.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "DISC 5.00%",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": null,
+        "confidence": 0.0,
+        "status": "not_present",
+        "reason": "No quantity specified for discount row."
+      },
+      "unit_price": {
+        "value": -3050.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": -3050.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "DISC 2.00%",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": null,
+        "confidence": 0.0,
+        "status": "not_present",
+        "reason": "No quantity specified for discount row."
+      },
+      "unit_price": {
+        "value": -1159.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": -1159.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      }
+    }
+  ],
+  "subtotal_tax_total_consistent": null
+}
