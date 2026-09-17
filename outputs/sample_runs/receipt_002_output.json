@@ -1,0 +1,99 @@
+{
+  "vendor_name": {
+    "value": null,
+    "confidence": 0.3,
+    "status": "illegible",
+    "reason": "Top of receipt is torn, cutting off the vendor name."
+  },
+  "transaction_date": {
+    "value": "2026-03-28",
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "receipt_number": {
+    "value": "CPKYK01202603280013",
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "currency": {
+    "value": "IDR",
+    "confidence": 0.95,
+    "status": "present",
+    "reason": null
+  },
+  "subtotal": {
+    "value": null,
+    "confidence": 0.0,
+    "status": "not_present",
+    "reason": "Subtotal line is not printed on the receipt."
+  },
+  "tax": {
+    "value": 13400.0,
+    "confidence": 0.95,
+    "status": "present",
+    "reason": null
+  },
+  "total": {
+    "value": 147400.0,
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Nasi Goreng Bacon Spesial Personal",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 61600.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 61600.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "Mie Kwangtong Spesial Jumbo",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 85800.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 85800.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    }
+  ],
+  "subtotal_tax_total_consistent": null
+}
