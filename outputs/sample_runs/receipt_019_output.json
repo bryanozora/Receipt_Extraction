@@ -1,0 +1,203 @@
+{
+  "vendor_name": {
+    "value": "PM Mart Rungkut - CV Putra Mas Ultima",
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "transaction_date": {
+    "value": "2026-08-28",
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "receipt_number": {
+    "value": "S.260828.00002.002455",
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "currency": {
+    "value": "IDR",
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "subtotal": {
+    "value": 153000.0,
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "tax": {
+    "value": 15162.0,
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "total": {
+    "value": 153000.0,
+    "confidence": 0.98,
+    "status": "present",
+    "reason": null
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "KUAS HOME CARE 1,5\"",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 6000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 6000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "KUAS HOME CARE 2\"",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 8000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 8000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "KUAS HOME CARE 2,5\"",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 10000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 10000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "AVIAN 0.9L-MATT SUPER BLACK SPN",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 88000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 88000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "THINNER PIRANHA-B 1LTR",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 21000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 21000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    },
+    {
+      "description": {
+        "value": "DENPUL ALFAGLOSS-0,25KG+HARD",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "quantity": {
+        "value": 1.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "unit_price": {
+        "value": 20000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "amount": {
+        "value": 20000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      }
+    }
+  ],
+  "subtotal_tax_total_consistent": false
+}

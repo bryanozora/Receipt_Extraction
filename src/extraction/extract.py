@@ -340,21 +340,22 @@ def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction | Extract
 
 
 if __name__ == "__main__":
-    image_paths = [
-        os.path.join("Raw Data", "receipt_026_p1.jpeg"),
-        os.path.join("Raw Data", "receipt_026_p2.jpeg"),
-    ]
-    result = extract_receipt(image_paths)
+    receipt_numbers = ["014", "016", "018", "019", "025"]
+    output_dir = os.path.join("outputs", "sample_runs")
+    os.makedirs(output_dir, exist_ok=True)
 
-    if isinstance(result, ExtractionError):
-        print(f"Extraction failed [{result.failure_stage}]: {result.message}")
-    else:
+    for number in receipt_numbers:
+        image_path = os.path.join("Raw Data", f"receipt_{number}.jpeg")
+        print(f"\n=== receipt_{number} ===")
+        result = extract_receipt(image_path)
+
+        if isinstance(result, ExtractionError):
+            print(f"Extraction failed [{result.failure_stage}]: {result.message}")
+            continue
+
         output_json = result.model_dump_json(indent=2)
         print(output_json)
 
-        output_dir = os.path.join("outputs", "sample_runs")
-        os.makedirs(output_dir, exist_ok=True)
-        receipt_names = "+".join(os.path.splitext(os.path.basename(p))[0] for p in image_paths)
-        output_path = os.path.join(output_dir, f"{receipt_names}_output.json")
+        output_path = os.path.join(output_dir, f"receipt_{number}_output.json")
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(output_json)
