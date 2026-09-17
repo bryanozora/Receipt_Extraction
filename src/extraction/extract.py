@@ -91,7 +91,10 @@ from google.genai import errors, types
 from PIL import Image, UnidentifiedImageError
 from pydantic import BaseModel, ValidationError
 
-from schema import ReceiptExtraction
+try:
+    from schema import ReceiptExtraction  # run directly as a script (python src/extraction/extract.py)
+except ImportError:
+    from src.extraction.schema import ReceiptExtraction  # imported as a package (e.g. by src/api/main.py)
 
 load_dotenv(override=True)
 
@@ -238,6 +241,39 @@ class ExtractionError(BaseModel):
     message: str
 
 
+class TokenUsage(BaseModel):
+    """Cumulative Gemini token usage across every API call made for one
+    extract_receipt() run, including retries -- a request that needed
+    retries genuinely cost more, so this must be summed across attempts
+    rather than just reflecting the last one.
+
+    Captures every *_token_count category the SDK's usage_metadata exposes
+    (confirmed by inspecting a live response), not just prompt/candidates --
+    gemini-3.6-flash does internal "thinking" before answering, and those
+    tokens are billed and counted in total_token_count but excluded from
+    candidates_token_count. Without thoughts_token_count here, the sum of
+    the fields we report doesn't reconcile with total_token_count, which
+    matters for accurate cost accounting in Step 12.
+    """
+
+    prompt_token_count: int = 0
+    candidates_token_count: int = 0
+    thoughts_token_count: int = 0
+    cached_content_token_count: int = 0
+    tool_use_prompt_token_count: int = 0
+    total_token_count: int = 0
+
+    def add(self, usage: types.GenerateContentResponseUsageMetadata | None) -> None:
+        if usage is None:
+            return
+        self.prompt_token_count += usage.prompt_token_count or 0
+        self.candidates_token_count += usage.candidates_token_count or 0
+        self.thoughts_token_count += usage.thoughts_token_count or 0
+        self.cached_content_token_count += usage.cached_content_token_count or 0
+        self.tool_use_prompt_token_count += usage.tool_use_prompt_token_count or 0
+        self.total_token_count += usage.total_token_count or 0
+
+
 def _is_transient(error: Exception) -> bool:
     """Whether an error is worth retrying: server errors, rate limiting, or a dropped connection."""
     if isinstance(error, errors.ServerError):
@@ -310,6 +346,90 @@ def _load_image_parts(image_paths: list[str]) -> list[types.Part]:
     return parts
 
 
+def extract_receipt_with_usage(
+    image_paths: str | list[str],
+) -> tuple[ReceiptExtraction | ExtractionError, TokenUsage]:
+    """Same as extract_receipt(), but also returns cumulative token usage
+    across every API call made for this run (including retries).
+
+    Used by the API layer (src/api/main.py) to report accurate per-request
+    cost/latency -- extract_receipt() itself stays as the simple, existing
+    public entry point and just discards the usage info.
+    """
+    if isinstance(image_paths, str):
+        image_paths = [image_paths]
+
+    usage = TokenUsage()
+
+    invalid_reason = _validate_input_files(image_paths)
+    if invalid_reason is not None:
+        return (
+            ExtractionError(
+                image_paths=image_paths,
+                failure_stage="invalid_input",
+                message=invalid_reason,
+            ),
+            usage,
+        )
+
+    client = genai.Client(api_key=API_KEY)
+    image_parts = _load_image_parts(image_paths)
+
+    message = USER_MESSAGE
+    last_parse_error: Exception | None = None
+
+    for _ in range(_PARSE_RETRY_COUNT + 1):
+        try:
+            response = _generate_with_retry(client, [*image_parts, message])
+        except (errors.APIError, httpx.TimeoutException, httpx.ConnectError) as api_error:
+            return (
+                ExtractionError(
+                    image_paths=image_paths,
+                    failure_stage="api_failure",
+                    message=f"Gemini API call failed: {api_error}",
+                ),
+                usage,
+            )
+
+        usage.add(getattr(response, "usage_metadata", None))
+
+        if not response.text:
+            # The API declined to produce output (e.g. a safety filter blocked the
+            # prompt or response) rather than raising -- this is the API's call, not
+            # a parsing problem, so it's an api_failure rather than a parse_failure.
+            return (
+                ExtractionError(
+                    image_paths=image_paths,
+                    failure_stage="api_failure",
+                    message=f"Gemini returned no output ({_describe_empty_response(response)})",
+                ),
+                usage,
+            )
+
+        try:
+            return ReceiptExtraction.model_validate_json(response.text), usage
+        except (ValidationError, json.JSONDecodeError) as parse_error:
+            last_parse_error = parse_error
+            message = (
+                f"{USER_MESSAGE}\n\n"
+                "Your previous response failed to parse against the required schema with this "
+                f"error:\n{parse_error}\n\n"
+                "Correct the output and return JSON that matches the schema exactly."
+            )
+
+    return (
+        ExtractionError(
+            image_paths=image_paths,
+            failure_stage="parse_failure",
+            message=(
+                f"Response did not parse into ReceiptExtraction after {_PARSE_RETRY_COUNT + 1} "
+                f"attempts: {last_parse_error}"
+            ),
+        ),
+        usage,
+    )
+
+
 def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction | ExtractionError:
     """Extract structured fields from one receipt.
 
@@ -325,62 +445,8 @@ def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction | Extract
     file(s) were invalid, the API call kept failing, or the response never
     parsed into valid JSON even after retries.
     """
-    if isinstance(image_paths, str):
-        image_paths = [image_paths]
-
-    invalid_reason = _validate_input_files(image_paths)
-    if invalid_reason is not None:
-        return ExtractionError(
-            image_paths=image_paths,
-            failure_stage="invalid_input",
-            message=invalid_reason,
-        )
-
-    client = genai.Client(api_key=API_KEY)
-    image_parts = _load_image_parts(image_paths)
-
-    message = USER_MESSAGE
-    last_parse_error: Exception | None = None
-
-    for _ in range(_PARSE_RETRY_COUNT + 1):
-        try:
-            response = _generate_with_retry(client, [*image_parts, message])
-        except (errors.APIError, httpx.TimeoutException, httpx.ConnectError) as api_error:
-            return ExtractionError(
-                image_paths=image_paths,
-                failure_stage="api_failure",
-                message=f"Gemini API call failed: {api_error}",
-            )
-
-        if not response.text:
-            # The API declined to produce output (e.g. a safety filter blocked the
-            # prompt or response) rather than raising -- this is the API's call, not
-            # a parsing problem, so it's an api_failure rather than a parse_failure.
-            return ExtractionError(
-                image_paths=image_paths,
-                failure_stage="api_failure",
-                message=f"Gemini returned no output ({_describe_empty_response(response)})",
-            )
-
-        try:
-            return ReceiptExtraction.model_validate_json(response.text)
-        except (ValidationError, json.JSONDecodeError) as parse_error:
-            last_parse_error = parse_error
-            message = (
-                f"{USER_MESSAGE}\n\n"
-                "Your previous response failed to parse against the required schema with this "
-                f"error:\n{parse_error}\n\n"
-                "Correct the output and return JSON that matches the schema exactly."
-            )
-
-    return ExtractionError(
-        image_paths=image_paths,
-        failure_stage="parse_failure",
-        message=(
-            f"Response did not parse into ReceiptExtraction after {_PARSE_RETRY_COUNT + 1} "
-            f"attempts: {last_parse_error}"
-        ),
-    )
+    result, _usage = extract_receipt_with_usage(image_paths)
+    return result
 
 
 if __name__ == "__main__":

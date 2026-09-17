@@ -2,3 +2,6 @@ google-genai
 python-dotenv
 pydantic
 Pillow
+fastapi
+uvicorn
+python-multipart
