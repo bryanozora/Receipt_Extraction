@@ -1,0 +1,163 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "SOLARIA",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-03-18",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "390RC2032026/00951",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 140003.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 14000.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 154000.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Nasi + Ayam Crispy Black Pepper Sauce",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price column is not printed on receipt."
+        },
+        "amount": {
+          "value": 31819.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi + Cripsy Chicken Spicy Mayo",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price column is not printed on receipt."
+        },
+        "amount": {
+          "value": 30910.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Goreng",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price column is not printed on receipt."
+        },
+        "amount": {
+          "value": 35455.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Goreng Special",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price column is not printed on receipt."
+        },
+        "amount": {
+          "value": 41819.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 47.11144449999847,
+  "token_usage": {
+    "prompt_token_count": 2552,
+    "candidates_token_count": 644,
+    "thoughts_token_count": 762,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 3958
+  }
+}

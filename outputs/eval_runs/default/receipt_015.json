@@ -1,0 +1,189 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "TEGUH",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-07-20",
+      "confidence": 0.9,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "NT26070265",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.9,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": null,
+      "confidence": 0.0,
+      "status": "not_present",
+      "reason": "No subtotal field is printed on the receipt."
+    },
+    "tax": {
+      "value": null,
+      "confidence": 0.0,
+      "status": "not_present",
+      "reason": "No tax field is printed on the receipt."
+    },
+    "total": {
+      "value": 1186500.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "PLANK KALSI 30 POLOS",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 7.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 52000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 364000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SENG GALVALUM 030X60",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 14.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 45000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 630000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "DINABOL 08X40",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 5.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 2500.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 12500.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SEKRUP SDS 2CM(500BJ)",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 140000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 140000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SEKRUP KALSI SDS 6X3(140BJ)",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 40000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 40000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": null
+  },
+  "latency_seconds": 14.982638499997847,
+  "token_usage": {
+    "prompt_token_count": 2516,
+    "candidates_token_count": 975,
+    "thoughts_token_count": 1602,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 5093
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "PM Mart Rungkut - CV Putra Mas Ultima",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-08-07",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "S.260807.00002.000642",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 162162.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": "Used pre-tax DPP amount matching tax and total."
+    },
+    "tax": {
+      "value": 17838.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 180000.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "THINNER ECERAN- A SPESIAL",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 4.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 23000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 92000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AVIAN 0.9L-SUPER WHITE SW",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 88000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 88000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 17.144751700005145,
+  "token_usage": {
+    "prompt_token_count": 2516,
+    "candidates_token_count": 450,
+    "thoughts_token_count": 863,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 3829
+  }
+}

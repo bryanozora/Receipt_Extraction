@@ -1,0 +1,267 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Bu Kris Tenggili",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-11-14",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "P-37587",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": null,
+      "confidence": 0.0,
+      "status": "not_present",
+      "reason": "Subtotal is not explicitly printed on the receipt."
+    },
+    "tax": {
+      "value": null,
+      "confidence": 0.0,
+      "status": "not_present",
+      "reason": "Tax amount is not explicitly listed on the receipt, only a note that tax is included."
+    },
+    "total": {
+      "value": 262500.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Bakwan + Empal",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 64000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 64000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Rawon/ Nasi Rawon Empal",
+          "confidence": 0.97,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 35500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 71000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Ayam Penyet(Dada/Paha)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 23500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 23500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Bakwan Penyet (5 Butir)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 37000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 37000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Putih",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 6000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 12000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Es Teh Manis / Hangat",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 6000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Es Cao (Jumbo)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 12000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 12000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Rawon (Pisah)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 37000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 37000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": null
+  },
+  "latency_seconds": 35.51567839999916,
+  "token_usage": {
+    "prompt_token_count": 2552,
+    "candidates_token_count": 1072,
+    "thoughts_token_count": 1367,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 4991
+  }
+}

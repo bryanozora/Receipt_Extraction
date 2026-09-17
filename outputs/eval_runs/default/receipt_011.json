@@ -1,0 +1,111 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Indomaret Fresh",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-10-28",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "T1NN-97349",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 35946.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 3954.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 39900.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "YOU C1000 LMN WTR500",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 3.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8800.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 26400.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "PUCUK TEH MLTI 1.3L",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 13500.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 13500.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 22.05024340000091,
+  "token_usage": {
+    "prompt_token_count": 2516,
+    "candidates_token_count": 752,
+    "thoughts_token_count": 1520,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 4788
+  }
+}

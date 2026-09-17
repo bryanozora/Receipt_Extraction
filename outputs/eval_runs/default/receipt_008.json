@@ -1,0 +1,163 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "PAPA RON'S PIZZA TRANS ICON MALL SURABAYA",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2024-12-31",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "141",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 411000.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 21578.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 237400.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "P/L BIANCA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 162000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 162000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "* Sausage Crust (L)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Quantity is not printed on this modifier row."
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not printed on this modifier row."
+        },
+        "amount": {
+          "value": 37000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "P/L CHICAGO PIZZA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 212000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 212000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "PIZZA BOX L",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 0.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 0.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": false
+  },
+  "latency_seconds": 30.80026380000345,
+  "token_usage": {
+    "prompt_token_count": 2552,
+    "candidates_token_count": 635,
+    "thoughts_token_count": 968,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 4155
+  }
+}

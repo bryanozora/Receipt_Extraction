@@ -1,0 +1,85 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "PM Mart Rungkut - CV Putra Mas Ultima",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-08-28",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "S.260828.00002.002456",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 21621.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 2378.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 24000.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "FLAP DISC PRIMERO ECER-NO 80",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 3.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 24000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 15.526047799998196,
+  "token_usage": {
+    "prompt_token_count": 2516,
+    "candidates_token_count": 327,
+    "thoughts_token_count": 1159,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 4002
+  }
+}

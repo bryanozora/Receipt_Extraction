@@ -1,0 +1,85 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Indomaret Fresh",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-10-28",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "4.0.25/T1NN-937/DIDIN/04",
+      "confidence": 0.9,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 81818.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 8182.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 90000.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "PC CRML MACCHIATO 1L",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 90000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 90000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 18.656885399999737,
+  "token_usage": {
+    "prompt_token_count": 2516,
+    "candidates_token_count": 316,
+    "thoughts_token_count": 1208,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 4040
+  }
+}

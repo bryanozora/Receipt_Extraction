@@ -1,0 +1,215 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Seniman Mie Kari",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-02-05",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "#5-30146",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 309000.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": null,
+      "confidence": 0.98,
+      "status": "not_present",
+      "reason": "Tax is not listed on the receipt."
+    },
+    "total": {
+      "value": 309000.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "SIGNATURE MIE KARI AYAM ORIGINAL - HEMAT",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 4.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.98,
+          "status": "not_present",
+          "reason": "Unit price not explicitly listed."
+        },
+        "amount": {
+          "value": 140000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "BARA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.98,
+          "status": "not_present",
+          "reason": "Unit price not explicitly listed."
+        },
+        "amount": {
+          "value": 10000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SIGNATURE MIE GORENG ORIGINAL - HEMAT",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.98,
+          "status": "not_present",
+          "reason": "Unit price not explicitly listed."
+        },
+        "amount": {
+          "value": 64000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "BARA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.98,
+          "status": "not_present",
+          "reason": "Unit price not explicitly listed."
+        },
+        "amount": {
+          "value": 10000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SIGNATURE MIE KARI SAPI ORIGINAL - HEMAT",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.98,
+          "status": "not_present",
+          "reason": "Unit price not explicitly listed."
+        },
+        "amount": {
+          "value": 80000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "BARA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.98,
+          "status": "not_present",
+          "reason": "Unit price not explicitly listed."
+        },
+        "amount": {
+          "value": 5000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": null
+  },
+  "latency_seconds": 29.482604700002412,
+  "token_usage": {
+    "prompt_token_count": 2552,
+    "candidates_token_count": 837,
+    "thoughts_token_count": 1611,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 5000
+  }
+}

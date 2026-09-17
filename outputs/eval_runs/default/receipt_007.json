@@ -1,0 +1,397 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "PENYETAN JOSS",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-03-07",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "070325029",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": "Inferred from location (Surabaya) and currency format."
+    },
+    "subtotal": {
+      "value": 365000.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 36500.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 401500.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "AYAM DADA + ASEM",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 26000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AYAM DADA + BENING",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 26000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AYAM DADA + LODEH",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 52000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AYAM PAHA + ASEM",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 52000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "GIMBAL UDANG + ...",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 32000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "LELE + LODEH",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 30000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "NASI PUTIH",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 8.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 64000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "NILA + SOP",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 35000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "TELUR DADAR GORENG",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 8000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES LEMON TEA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 13000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES TEH MANIS",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 8000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES TEH MANIS (J)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 10000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES TEH TAWAR (J)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price is not explicitly printed in a separate column."
+        },
+        "amount": {
+          "value": 9000.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 18.117694100001245,
+  "token_usage": {
+    "prompt_token_count": 2530,
+    "candidates_token_count": 1658,
+    "thoughts_token_count": 1744,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 5932
+  }
+}

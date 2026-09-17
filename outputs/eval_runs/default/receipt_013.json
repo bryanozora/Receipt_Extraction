@@ -1,0 +1,137 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "ARISON MM",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-08-05",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "827549",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.9,
+      "status": "present",
+      "reason": "Inferred from location Surabaya and currency format."
+    },
+    "subtotal": {
+      "value": null,
+      "confidence": 0.0,
+      "status": "not_present",
+      "reason": "Subtotal is not explicitly printed on the receipt."
+    },
+    "tax": {
+      "value": null,
+      "confidence": 0.0,
+      "status": "not_present",
+      "reason": "Tax is not printed on the receipt."
+    },
+    "total": {
+      "value": 41500.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "CLUB GALON 19 LT**",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 17500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 17500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AQUA GALON ISI 19 LT**",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 21000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 21000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ONGKOS KIRIM",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 3000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 3000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": null
+  },
+  "latency_seconds": 15.293546199995035,
+  "token_usage": {
+    "prompt_token_count": 2516,
+    "candidates_token_count": 528,
+    "thoughts_token_count": 945,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 3989
+  }
+}
