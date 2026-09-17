@@ -1,0 +1,149 @@
+{
+  "vendor_name": {
+    "value": "WBK Manyar",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2025-09-26",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": null,
+    "acceptable_alternatives": [],
+    "status": "not_present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": 136368.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "tax": {
+    "value": 13637.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "total": {
+    "value": 150000.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Bakwan Penyet",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 2.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 33627.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 67274.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Nasi Putih Biasa",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 3.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 5455.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 16365.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Telor Grg (1bj)",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 5910.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 5910.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Bebek Penyet",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 28637.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 28637.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Milo Cao Jumbo (Hgt/Es)",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 18182.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 18182.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "vendor_name": {
+    "value": "ARISON MM",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2025-08-05",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": "827549",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": null,
+    "acceptable_alternatives": [],
+    "status": "not_present"
+  },
+  "tax": {
+    "value": null,
+    "acceptable_alternatives": [],
+    "status": "not_present"
+  },
+  "total": {
+    "value": 41500.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "CLUB GALON 19 LT",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 17500.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 17500.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "AQUA GALON ISI 19 LT",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 21000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 21000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "ONGKOS KIRIM",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 3000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 3000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "vendor_name": {
+    "value": "Rasha Van Java",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2026-09-06",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": "RVJ202609060015",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": 1221500.0,
+    "acceptable_alternatives": [
+      1208000.0
+    ],
+    "status": "present"
+  },
+  "tax": {
+    "value": 28350.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "total": {
+    "value": 1249850.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "DAHLIA 938K",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 938000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 938000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Ayam Karamel Mentega Bawang",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 60000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 60000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Terong Sambal",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 38000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 38000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Gurami Saos Thai",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 108000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 108000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Es Jeruk Manis",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 22000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 22000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Mineral Water",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 3.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 10000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 30000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "Teh Melati Rasa",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 12000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 12000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}

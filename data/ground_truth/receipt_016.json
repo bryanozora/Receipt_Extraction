@@ -1,0 +1,61 @@
+{
+  "vendor_name": {
+    "value": "Depo Bangunan",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2026-07-16",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": "63195024",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": 51163.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "tax": {
+    "value": 5628.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "total": {
+    "value": 56791.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "BRAIDED BDH-104 40 CM FLEXIBLE",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 61000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 56791.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}

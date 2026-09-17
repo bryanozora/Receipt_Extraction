@@ -1,0 +1,83 @@
+{
+  "vendor_name": {
+    "value": "TEGUH",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2026-07-23",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": "KS26070875",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": null,
+    "acceptable_alternatives": [],
+    "status": "not_present"
+  },
+  "tax": {
+    "value": null,
+    "acceptable_alternatives": [],
+    "status": "not_present"
+  },
+  "total": {
+    "value": 102000.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "SEKRUP SDS 2CM(100BJ) - DOZ",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 2.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 45000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 90000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "SOK 4\" DV PVC - BIJI",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 12000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 12000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}

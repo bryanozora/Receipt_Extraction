@@ -1,0 +1,61 @@
+{
+  "vendor_name": {
+    "value": "Indomaret Fresh Manyar Tirtoyoso",
+    "acceptable_alternatives": ["Indomaret Fresh", "Indomaret", "FRESH MANYAR TIRTOYOSO"],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2025-10-28",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": "T1NN-937",
+    "acceptable_alternatives": ["28.10.25-10:11/4.0.25/T1NN-937/DIDIN/04"],
+    "status": "present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": 81818.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "tax": {
+    "value": 8182.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "total": {
+    "value": 90000.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "PC CRML MACCHIATO 1L",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 90000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 90000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}

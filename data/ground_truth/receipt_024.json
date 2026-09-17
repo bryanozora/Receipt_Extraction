@@ -1,0 +1,83 @@
+{
+  "vendor_name": {
+    "value": "PM Mart Rungkut - CV Putra Mas Ultima",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "transaction_date": {
+    "value": "2026-08-10",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "receipt_number": {
+    "value": "S.260810.00002.000948",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "currency": {
+    "value": "IDR",
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "subtotal": {
+    "value": 224324.0,
+    "acceptable_alternatives":[],
+    "status": "present"
+  },
+  "tax": {
+    "value": 24676.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "total": {
+    "value": 249000.0,
+    "acceptable_alternatives": [],
+    "status": "present"
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "ESSENCE TOUGH SHIELD MATT-GALON BASE C",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 243000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 243000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    },
+    {
+      "description": {
+        "value": "KUAS HOME CARE 1,5\"",
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "quantity": {
+        "value": 1.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "unit_price": {
+        "value": 6000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      },
+      "amount": {
+        "value": 6000.0,
+        "acceptable_alternatives": [],
+        "status": "present"
+      }
+    }
+  ]
+}
