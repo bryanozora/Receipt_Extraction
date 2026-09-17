@@ -33,16 +33,50 @@ FieldValue[T] structure itself:
 The prompt is split into a system instruction (stable extraction rules:
 schema shape, anti-hallucination, normalization) and a short per-call user
 message, rather than folding everything into one block of text.
+
+Resilience: low-confidence success vs. hard failure
+-----------------------------------------------------
+These are two different things and this module keeps them distinct:
+
+- A **low-confidence success** is a valid `ReceiptExtraction` where some
+  fields have low confidence or `status="illegible"`/`"not_present"`. This
+  is normal, expected output, not an error -- it's the model doing its job
+  honestly on a messy document.
+- A **hard failure** means extraction genuinely did not complete: the input
+  file couldn't be read, the API call kept failing, or the response never
+  parsed into valid JSON even after retries. `extract_receipt` returns an
+  `ExtractionError` for these instead of a `ReceiptExtraction`, and never
+  raises an uncaught exception or silently returns empty-looking-but-valid
+  data -- a caller can always tell the two cases apart with a single
+  `isinstance` check.
+
+Three failure categories are handled, each with its own retry policy:
+
+1. Invalid input files -- checked before any API call is made (fail fast,
+   don't spend a request on a corrupt file).
+2. Transient API/network failures (5xx, rate limiting, connection
+   timeouts) -- retried with exponential backoff *per call*. A response
+   that comes back with no text at all (e.g. blocked by a safety filter)
+   falls in this category too, since it's the API declining to produce
+   output rather than a shape/parsing problem -- it's reported as an
+   `api_failure` immediately rather than crashing on `None`.
+3. Persistent parse/validation failures -- retried by feeding the parse
+   error back into the prompt, *across calls* (up to two retries beyond
+   the first attempt).
 """
 
 import json
 import mimetypes
 import os
+import time
+from typing import Literal
 
+import httpx
 from dotenv import load_dotenv
 from google import genai
-from google.genai import types
-from pydantic import ValidationError
+from google.genai import errors, types
+from PIL import Image, UnidentifiedImageError
+from pydantic import BaseModel, ValidationError
 
 from schema import ReceiptExtraction
 
@@ -136,6 +170,91 @@ _GENERATE_CONFIG = types.GenerateContentConfig(
     temperature=0.1,
 )
 
+# Exponential backoff delays (seconds) applied before each retry of a single
+# Gemini call when it fails with a transient error. 3 retries beyond the
+# initial attempt, so up to 4 calls total for one generate_content invocation.
+_API_RETRY_DELAYS_SECONDS = (1, 2, 4)
+
+# How many times to re-prompt (feeding the parse error back) if the response
+# doesn't validate against ReceiptExtraction. 2 retries beyond the initial
+# attempt, so up to 3 calls total across the whole extract_receipt() run.
+_PARSE_RETRY_COUNT = 2
+
+
+class ExtractionError(BaseModel):
+    """A hard failure: extraction did not complete for the given image(s).
+
+    Distinct from a low-confidence ReceiptExtraction, which is a normal,
+    valid result -- this is only returned when extraction genuinely could
+    not produce one.
+    """
+
+    image_paths: list[str]
+    failure_stage: Literal["invalid_input", "api_failure", "parse_failure"]
+    message: str
+
+
+def _is_transient(error: Exception) -> bool:
+    """Whether an error is worth retrying: server errors, rate limiting, or a dropped connection."""
+    if isinstance(error, errors.ServerError):
+        return True
+    if isinstance(error, errors.ClientError) and error.code == 429:
+        return True
+    if isinstance(error, (httpx.TimeoutException, httpx.ConnectError)):
+        return True
+    return False
+
+
+def _generate_with_retry(
+    client: genai.Client, contents: list
+) -> types.GenerateContentResponse:
+    """Call Gemini once, retrying with exponential backoff on transient failures.
+
+    Non-transient errors (e.g. a 400 bad request) are raised immediately --
+    retrying those wouldn't help. If every attempt at a transient error is
+    exhausted, the last error is raised for the caller to turn into a hard
+    failure instead of letting it crash the whole process.
+    """
+    last_error: Exception = RuntimeError("unreachable")
+    for delay in (0,) + _API_RETRY_DELAYS_SECONDS:
+        if delay:
+            time.sleep(delay)
+        try:
+            return client.models.generate_content(
+                model=MODEL_NAME,
+                contents=contents,
+                config=_GENERATE_CONFIG,
+            )
+        except (errors.APIError, httpx.TimeoutException, httpx.ConnectError) as e:
+            last_error = e
+            if not _is_transient(e):
+                raise
+    raise last_error
+
+
+def _validate_input_files(image_paths: list[str]) -> str | None:
+    """Return an error message if a file is missing or not a valid image, else None."""
+    for path in image_paths:
+        if not os.path.isfile(path):
+            return f"File not found: {path}"
+        try:
+            with Image.open(path) as img:
+                img.verify()
+        except (UnidentifiedImageError, OSError) as e:
+            return f"File is not a valid, readable image ({path}): {e}"
+    return None
+
+
+def _describe_empty_response(response: types.GenerateContentResponse) -> str:
+    """Best-effort explanation for why a response has no text, e.g. a safety block."""
+    if response.prompt_feedback and response.prompt_feedback.block_reason:
+        return f"prompt blocked: {response.prompt_feedback.block_reason}"
+    if response.candidates:
+        finish_reason = response.candidates[0].finish_reason
+        if finish_reason:
+            return f"finish_reason={finish_reason}"
+    return "empty response with no available block/finish reason"
+
 
 def _load_image_parts(image_paths: list[str]) -> list[types.Part]:
     parts = []
@@ -147,7 +266,7 @@ def _load_image_parts(image_paths: list[str]) -> list[types.Part]:
     return parts
 
 
-def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction:
+def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction | ExtractionError:
     """Extract structured fields from one receipt.
 
     `image_paths` is either a single image path, or a list of image paths
@@ -156,37 +275,68 @@ def extract_receipt(image_paths: str | list[str]) -> ReceiptExtraction:
     one API call, in the given order, so the model reasons across them as
     one document rather than as separate receipts.
 
-    Sends the image(s) + prompt to Gemini once. If the response doesn't
-    parse into ReceiptExtraction, retries once with the parse error fed
-    back into the prompt so the model can correct its own output.
+    Returns a `ReceiptExtraction` on success (which may still contain
+    low-confidence or abstained fields -- that's not an error), or an
+    `ExtractionError` if extraction genuinely didn't complete: the input
+    file(s) were invalid, the API call kept failing, or the response never
+    parsed into valid JSON even after retries.
     """
     if isinstance(image_paths, str):
         image_paths = [image_paths]
 
+    invalid_reason = _validate_input_files(image_paths)
+    if invalid_reason is not None:
+        return ExtractionError(
+            image_paths=image_paths,
+            failure_stage="invalid_input",
+            message=invalid_reason,
+        )
+
     client = genai.Client(api_key=API_KEY)
     image_parts = _load_image_parts(image_paths)
 
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=[*image_parts, USER_MESSAGE],
-        config=_GENERATE_CONFIG,
-    )
+    message = USER_MESSAGE
+    last_parse_error: Exception | None = None
 
-    try:
-        return ReceiptExtraction.model_validate_json(response.text)
-    except (ValidationError, json.JSONDecodeError) as first_error:
-        retry_message = (
-            f"{USER_MESSAGE}\n\n"
-            "Your previous response failed to parse against the required schema with this "
-            f"error:\n{first_error}\n\n"
-            "Correct the output and return JSON that matches the schema exactly."
-        )
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=[*image_parts, retry_message],
-            config=_GENERATE_CONFIG,
-        )
-        return ReceiptExtraction.model_validate_json(response.text)
+    for _ in range(_PARSE_RETRY_COUNT + 1):
+        try:
+            response = _generate_with_retry(client, [*image_parts, message])
+        except (errors.APIError, httpx.TimeoutException, httpx.ConnectError) as api_error:
+            return ExtractionError(
+                image_paths=image_paths,
+                failure_stage="api_failure",
+                message=f"Gemini API call failed: {api_error}",
+            )
+
+        if not response.text:
+            # The API declined to produce output (e.g. a safety filter blocked the
+            # prompt or response) rather than raising -- this is the API's call, not
+            # a parsing problem, so it's an api_failure rather than a parse_failure.
+            return ExtractionError(
+                image_paths=image_paths,
+                failure_stage="api_failure",
+                message=f"Gemini returned no output ({_describe_empty_response(response)})",
+            )
+
+        try:
+            return ReceiptExtraction.model_validate_json(response.text)
+        except (ValidationError, json.JSONDecodeError) as parse_error:
+            last_parse_error = parse_error
+            message = (
+                f"{USER_MESSAGE}\n\n"
+                "Your previous response failed to parse against the required schema with this "
+                f"error:\n{parse_error}\n\n"
+                "Correct the output and return JSON that matches the schema exactly."
+            )
+
+    return ExtractionError(
+        image_paths=image_paths,
+        failure_stage="parse_failure",
+        message=(
+            f"Response did not parse into ReceiptExtraction after {_PARSE_RETRY_COUNT + 1} "
+            f"attempts: {last_parse_error}"
+        ),
+    )
 
 
 if __name__ == "__main__":
@@ -195,12 +345,16 @@ if __name__ == "__main__":
         os.path.join("Raw Data", "receipt_026_p2.jpeg"),
     ]
     result = extract_receipt(image_paths)
-    output_json = result.model_dump_json(indent=2)
-    print(output_json)
 
-    output_dir = os.path.join("outputs", "sample_runs")
-    os.makedirs(output_dir, exist_ok=True)
-    receipt_names = "+".join(os.path.splitext(os.path.basename(p))[0] for p in image_paths)
-    output_path = os.path.join(output_dir, f"{receipt_names}_output.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(output_json)
+    if isinstance(result, ExtractionError):
+        print(f"Extraction failed [{result.failure_stage}]: {result.message}")
+    else:
+        output_json = result.model_dump_json(indent=2)
+        print(output_json)
+
+        output_dir = os.path.join("outputs", "sample_runs")
+        os.makedirs(output_dir, exist_ok=True)
+        receipt_names = "+".join(os.path.splitext(os.path.basename(p))[0] for p in image_paths)
+        output_path = os.path.join(output_dir, f"{receipt_names}_output.json")
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(output_json)
