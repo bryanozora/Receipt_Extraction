@@ -1,0 +1,14 @@
+myVenv.venv/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+.env
+
+# Provided to the eval service via volume mounts at runtime instead (see
+# docker-compose.yml) -- excluded here to keep the image build lean and
+# avoid baking a snapshot of data that's meant to stay live/host-editable.
+Raw Data/
+data/
+outputs/

@@ -1,0 +1,39 @@
+# docker compose up            -> starts only `api`, serving the extraction API.
+# docker compose run --rm eval -> runs the eval scripts once against `api`, then exits.
+#                                  (never starts automatically with `up` -- see `profiles` below.)
+#
+# Eval run id: set via the RUN_ID environment variable (defaults to "default"),
+# e.g. `RUN_ID=prompt_v3 docker compose run --rm eval`, or put RUN_ID=... in
+# .env to change the default without typing it every time.
+
+services:
+  api:
+    build: .
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  eval:
+    build: .
+    profiles: ["eval"]  # excluded from `docker compose up`; `run --rm eval` activates it explicitly
+    depends_on:
+      api:
+        condition: service_healthy
+    env_file:
+      - .env  # not read directly by the eval scripts (they call the API, not Gemini), kept for consistency
+    environment:
+      - API_BASE_URL=http://api:8000  # Compose's internal DNS resolves the `api` service name
+      - RUN_ID=${RUN_ID:-default}
+    command: sh -c "python scripts/run_eval_extractions.py \"$$RUN_ID\" && python scripts/score_eval.py \"$$RUN_ID\""
+    volumes:
+      - ./data/ground_truth:/app/data/ground_truth
+      - "./Raw Data:/app/Raw Data"
+      - ./outputs:/app/outputs
