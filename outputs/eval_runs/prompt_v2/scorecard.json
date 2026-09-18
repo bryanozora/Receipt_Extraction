@@ -1,0 +1,100 @@
+{
+  "run_id": "prompt_v2",
+  "receipts_total": 26,
+  "receipts_scored": 26,
+  "receipts_extraction_failed": 0,
+  "receipts_pending_not_yet_extracted": 0,
+  "receipts_ground_truth_not_ready": 0,
+  "field_category_counts": {
+    "correct": 669,
+    "wrong_value": 38,
+    "hallucinated": 0,
+    "wrongly_abstained": 3,
+    "missed_status": 0
+  },
+  "overall_field_accuracy": 0.9423,
+  "extraction_failed_breakdown": {},
+  "line_items_unmatched": {
+    "ground_truth_rows_missed": 0,
+    "extracted_rows_hallucinated": 0
+  },
+  "precision_recall_by_field": {
+    "vendor_name": {
+      "precision": 0.9615,
+      "recall": 0.9615,
+      "tp": 25,
+      "fp": 1,
+      "fn": 1
+    },
+    "currency": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 26,
+      "fp": 0,
+      "fn": 0
+    },
+    "transaction_date": {
+      "precision": 0.9231,
+      "recall": 0.9231,
+      "tp": 24,
+      "fp": 2,
+      "fn": 2
+    },
+    "subtotal": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 21,
+      "fp": 0,
+      "fn": 0
+    },
+    "tax": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 21,
+      "fp": 0,
+      "fn": 0
+    },
+    "total": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 26,
+      "fp": 0,
+      "fn": 0
+    },
+    "description": {
+      "precision": 0.9621,
+      "recall": 0.9621,
+      "tp": 127,
+      "fp": 5,
+      "fn": 5
+    },
+    "quantity": {
+      "precision": 1.0,
+      "recall": 0.9921,
+      "tp": 126,
+      "fp": 0,
+      "fn": 1
+    },
+    "unit_price": {
+      "precision": 0.8016,
+      "recall": 0.7953,
+      "tp": 101,
+      "fp": 25,
+      "fn": 26
+    },
+    "amount": {
+      "precision": 0.9924,
+      "recall": 0.9924,
+      "tp": 131,
+      "fp": 1,
+      "fn": 1
+    },
+    "receipt_number": {
+      "precision": 0.8182,
+      "recall": 0.7826,
+      "tp": 18,
+      "fp": 4,
+      "fn": 5
+    }
+  }
+}

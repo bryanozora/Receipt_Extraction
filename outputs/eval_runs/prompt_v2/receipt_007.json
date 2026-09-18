@@ -1,0 +1,397 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "PENYETAN JOSS",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-03-07",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "070325029",
+      "confidence": 0.85,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 365000.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 36500.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 401500.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "AYAM DADA + ASEM",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 26000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 26000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AYAM DADA + BENING",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 26000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 26000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AYAM DADA + LODEH",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 26000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 52000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "AYAM PAHA + ASEM",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 2.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 26000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 52000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "GIMBAL UDANG + ...",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 32000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 32000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "LELE + LODEH",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 30000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 30000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "NASI PUTIH",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 8.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 64000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "NILA + SOP",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 35000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 35000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "TELUR DADAR GORENG",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 8000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES LEMON TEA",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 13000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 13000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES TEH MANIS",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 8000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES TEH MANIS (J)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 10000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 10000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "ES TEH TAWAR (J)",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 9000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Computed from total amount and quantity."
+        },
+        "amount": {
+          "value": 9000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 43.04444710000007,
+  "token_usage": {
+    "prompt_token_count": 2974,
+    "candidates_token_count": 1657,
+    "thoughts_token_count": 1379,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 6010
+  }
+}

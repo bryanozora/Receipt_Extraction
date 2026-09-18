@@ -1,0 +1,137 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Indomaret",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2023-08-10",
+      "confidence": 0.9,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "10.08.23-21:12/4.4.2/FSFL-915 54/MUTIA/02",
+      "confidence": 0.92,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 11562.0,
+      "confidence": 0.85,
+      "status": "present",
+      "reason": "DPP (tax base) value as printed on receipt."
+    },
+    "tax": {
+      "value": 1387.0,
+      "confidence": 0.9,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 11500.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "YC SS BKR SAPI KEJU",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 10400.0,
+          "confidence": 0.85,
+          "status": "present",
+          "reason": "Computed from original price 13,000 minus 2,600 discount."
+        },
+        "amount": {
+          "value": 10400.0,
+          "confidence": 0.85,
+          "status": "present",
+          "reason": "Computed by applying the 2,600 discount line to this item."
+        }
+      },
+      {
+        "description": {
+          "value": "YC ADD TOP SAUS CHL",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 1000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 1000.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "PEDULI ANAK BANGSA",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 100.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 100.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": false
+  },
+  "latency_seconds": 98.89879109999947,
+  "token_usage": {
+    "prompt_token_count": 2960,
+    "candidates_token_count": 582,
+    "thoughts_token_count": 5738,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 9280
+  }
+}

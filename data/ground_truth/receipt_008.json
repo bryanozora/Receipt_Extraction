@@ -1,7 +1,7 @@
 {
   "vendor_name": {
     "value": "PAPA RON'S PIZZA",
-    "acceptable_alternatives": [],
+    "acceptable_alternatives": ["PAPA RON'S PIZZA TRANS ICON MALL SURABAYA"],
     "status": "present"
   },
   "transaction_date": {
@@ -60,7 +60,7 @@
     {
       "description": {
         "value": "Sausage Crust (L)",
-        "acceptable_alternatives": [],
+        "acceptable_alternatives": ["* Sausage Crust (L)"],
         "status": "present"
       },
       "quantity": {

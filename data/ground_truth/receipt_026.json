@@ -66,14 +66,14 @@
         "status": "present"
       },
       "quantity": {
-        "value": 1.0,
+        "value": null,
         "acceptable_alternatives": [],
-        "status": "present"
+        "status": "not_present"
       },
       "unit_price": {
-        "value": 8290.0,
+        "value": null,
         "acceptable_alternatives": [],
-        "status": "present"
+        "status": "not_present"
       },
       "amount": {
         "value": 8290.0,
@@ -198,14 +198,14 @@
         "status": "present"
       },
       "quantity": {
-        "value": 1.0,
+        "value": null,
         "acceptable_alternatives": [],
-        "status": "present"
+        "status": "not_present"
       },
       "unit_price": {
-        "value": 4190.0,
+        "value": null,
         "acceptable_alternatives": [],
-        "status": "present"
+        "status": "not_present"
       },
       "amount": {
         "value": 4190.0,
@@ -242,14 +242,14 @@
         "status": "present"
       },
       "quantity": {
-        "value": 1.0,
+        "value": null,
         "acceptable_alternatives": [],
-        "status": "present"
+        "status": "not_present"
       },
       "unit_price": {
-        "value": 9890.0,
+        "value": null,
         "acceptable_alternatives": [],
-        "status": "present"
+        "status": "not_present"
       },
       "amount": {
         "value": 9890.0,

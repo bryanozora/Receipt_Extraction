@@ -47,6 +47,27 @@ brand logo, and resolving subtotal ambiguity when a receipt prints both a
 pre-tax "DPP" and a separately labeled "Subtotal" by checking which value
 is arithmetically consistent with tax + total.
 
+Prompt refinements from the first eval scorecard (Step 9)
+-------------------------------------------------------------
+Two more systemic patterns, found from the first real scorecard run rather
+than spot-checking samples: unit_price was being marked not_present on
+every row where it wasn't printed explicitly, even when it was trivially
+derivable as amount / quantity -- now computed and reported as a present,
+lower-confidence value instead of an unnecessary abstention. Item
+descriptions were including a leading numeric SKU/product code straight
+off the receipt (e.g. "36512328 TANGO WFR CHO 100G") instead of just the
+human-readable name -- now stripped.
+
+Three more fixes from a full scorecard review, on top of those two: queue/order/table numbers
+were sometimes being extracted as receipt_number when no real receipt/invoice number was
+printed -- now only a field actually labeled or functioning as a receipt/invoice/transaction
+number qualifies, otherwise receipt_number is not_present. Receipt numbers were sometimes
+truncated to a fragment of a longer printed sequence -- now the full printed form is required.
+A discount line was sometimes forced onto the immediately preceding item even when the
+arithmetic didn't plausibly fit (e.g. the discount exceeded that item's price) -- now that
+forced attribution is disallowed, in favor of best judgment, lower confidence, and a noted
+ambiguity in reason.
+
 Resilience: low-confidence success vs. hard failure
 -----------------------------------------------------
 These are two different things and this module keeps them distinct:
@@ -139,6 +160,17 @@ it, prefer the printed text for vendor_name. Only infer the vendor from a logo w
 legible printed store name anywhere on the receipt, and note the lower confidence in "reason" \
 when you do.
 
+## Receipt number
+Some receipts print a separate queue number, order number, or table number (e.g. for pickup or \
+serving order) alongside or instead of a formal receipt/invoice/transaction number. Only extract \
+receipt_number from something that is actually labeled as, or clearly functions as, a \
+receipt/invoice/transaction number -- not a queue number, order number, or table number. If only \
+a queue/order number is visible and no actual receipt number is printed anywhere on the receipt, \
+mark receipt_number as "not_present" rather than using the queue/order number as a stand-in.
+
+When a receipt prints several number sequences near each other and one of them is identified as \
+the receipt number, extract its complete printed form -- not a partial substring of it.
+
 ## Subtotal ambiguity (e.g. "DPP" vs. a separately printed "Subtotal")
 Some receipts print more than one value that could plausibly be "subtotal" -- for example both \
 "DPP" (the pre-tax base amount) and a separately labeled "Subtotal" line, which are not always \
@@ -164,10 +196,21 @@ isn't printed explicitly, and lower your confidence accordingly.
 
 ## Line items
 Extract one line_items entry per distinct row of the itemized purchase table, in the order they \
-appear on the receipt. If a row states an amount but not an explicit quantity or unit price, \
-mark quantity/unit_price as "not_present" rather than assuming a quantity of 1. If a receipt has \
-no itemized table at all, return an empty line_items list rather than inventing a single generic \
+appear on the receipt. If a row states an amount but not an explicit quantity, mark quantity as \
+"not_present" rather than assuming a quantity of 1 -- do not guess it. If a receipt has no \
+itemized table at all, return an empty line_items list rather than inventing a single generic \
 row.
+
+Item descriptions sometimes have a leading numeric SKU/product code before the human-readable \
+name (e.g. "36512328 TANGO WFR CHO 100G"). Exclude the leading SKU/code from description -- keep \
+only the human-readable item name (e.g. "TANGO WFR CHO 100G").
+
+Unit price is often not printed explicitly, but it can be a legitimate derived fact rather than \
+a guess: if quantity and amount are both known for a row and unit_price is not explicitly \
+printed, compute unit_price = amount / quantity, set status="present", note in reason that the \
+value was computed rather than read directly, and use a somewhat lower confidence than you would \
+for a value read directly off the receipt. Only mark unit_price as "not_present" when it \
+genuinely cannot be determined -- e.g. quantity itself is also unknown or not_present.
 
 If part of a line item is obscured (by handwriting, a stamp, a fold, or similar) but there is \
 visible evidence the row exists (e.g. a partial line, a stray price, or a gap in the item \
@@ -180,6 +223,12 @@ If a receipt shows a discount as a percentage or amount on its own line directly
 a separate line_items entry for the discount line itself. Instead, treat it as modifying the \
 item immediately above it: compute that item's amount as the post-discount total, and lower \
 confidence and note the computation in reason if the arithmetic is uncertain.
+
+If a discount amount doesn't plausibly apply to the item immediately above it (e.g. the discount \
+exceeds that item's price, or the arithmetic is clearly inconsistent with it), do not force it \
+onto that item regardless. Use your best judgment about which item it actually modifies, lower \
+your confidence on the affected amount, and note the ambiguity in reason -- never silently \
+produce an incorrect amount just to keep the arithmetic looking clean.
 
 ## Multi-image receipts
 Sometimes you will be given more than one image in a single request. When that happens, the \

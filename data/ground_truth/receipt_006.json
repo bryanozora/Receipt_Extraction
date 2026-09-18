@@ -159,7 +159,7 @@
         "status": "present"
       },
       "unit_price": {
-        "value": null,
+        "value": 5000,
         "acceptable_alternatives": [],
         "status": "present"
       },

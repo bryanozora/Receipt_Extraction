@@ -37,8 +37,8 @@
   "line_items": [
     {
       "description": {
-        "value": "THINNER ECERAN-A SPESIAL",
-        "acceptable_alternatives": [],
+        "value": "THINNER ECERAN- A SPESIAL",
+        "acceptable_alternatives": ["THINNER ECERAN-A SPESIAL"],
         "status": "present"
       },
       "quantity": {

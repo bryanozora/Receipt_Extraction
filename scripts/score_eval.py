@@ -52,6 +52,7 @@ are true negatives and don't enter precision/recall at all.
 
 import argparse
 import difflib
+import re
 import json
 import os
 
@@ -82,10 +83,29 @@ def _normalize_str(s):
     return s.strip().lower() if isinstance(s, str) else s
 
 
+# Cosmetic punctuation that shows up inconsistently between ground truth and
+# extracted text for the same real content -- an inch mark rendered as a
+# straight quote (") on one side and an asterisk (*) on the other, a
+# trailing "**" promo marker, a stray apostrophe/backtick, etc. Stripped only
+# for string-field *correctness* matching (below), not for _normalize_str
+# itself, which line-item alignment also uses and which shouldn't change.
+_COSMETIC_SYMBOLS_PATTERN = re.compile(r"[*\"'`´′″]+")
+
+
+def _strip_cosmetic_symbols(s):
+    if not isinstance(s, str):
+        return s
+    return re.sub(r"\s+", " ", _COSMETIC_SYMBOLS_PATTERN.sub("", s)).strip()
+
+
+def _normalize_for_matching(s):
+    return _strip_cosmetic_symbols(_normalize_str(s))
+
+
 def _string_matches(ex_value, gt_value, gt_alternatives) -> bool:
     candidates = [gt_value, *(gt_alternatives or [])]
-    ex_norm = _normalize_str(ex_value)
-    return any(ex_norm == _normalize_str(c) for c in candidates if c is not None)
+    ex_norm = _normalize_for_matching(ex_value)
+    return any(ex_norm == _normalize_for_matching(c) for c in candidates if c is not None)
 
 
 def _numeric_matches(ex_value, gt_value, gt_alternatives) -> bool:

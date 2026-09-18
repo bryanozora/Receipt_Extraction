@@ -38,7 +38,7 @@
     {
       "description": {
         "value": "CLUB GALON 19 LT",
-        "acceptable_alternatives": [],
+        "acceptable_alternatives": ["CLUB GALON 19 LT**"],
         "status": "present"
       },
       "quantity": {
@@ -60,7 +60,7 @@
     {
       "description": {
         "value": "AQUA GALON ISI 19 LT",
-        "acceptable_alternatives": [],
+        "acceptable_alternatives": ["AQUA GALON ISI 19 LT**"],
         "status": "present"
       },
       "quantity": {

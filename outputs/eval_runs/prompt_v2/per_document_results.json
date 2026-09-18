@@ -70,9 +70,9 @@
               "extracted_value": 3.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 26000.0,
-              "extracted_value": null
+              "extracted_value": 26000.0
             },
             "amount": {
               "category": "correct",
@@ -97,9 +97,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 42000.0,
-              "extracted_value": null
+              "extracted_value": 42000.0
             },
             "amount": {
               "category": "correct",
@@ -124,9 +124,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 18000.0,
-              "extracted_value": null
+              "extracted_value": 18000.0
             },
             "amount": {
               "category": "correct",
@@ -151,9 +151,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 30000.0,
-              "extracted_value": null
+              "extracted_value": 30000.0
             },
             "amount": {
               "category": "correct",
@@ -178,9 +178,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 20000.0,
-              "extracted_value": null
+              "extracted_value": 20000.0
             },
             "amount": {
               "category": "correct",
@@ -205,9 +205,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 28000.0,
-              "extracted_value": null
+              "extracted_value": 28000.0
             },
             "amount": {
               "category": "correct",
@@ -221,10 +221,10 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 25,
+      "correct": 31,
       "wrong_value": 0,
       "hallucinated": 0,
-      "wrongly_abstained": 6,
+      "wrongly_abstained": 0,
       "missed_status": 0
     }
   },
@@ -232,10 +232,10 @@
     "status": "scored",
     "fields": {
       "vendor_name": {
-        "category": "hallucinated",
-        "ground_truth_value": null,
+        "category": "correct",
+        "ground_truth_value": "Cipork Keriyuk",
         "extracted_value": "Cipork Keriyuk",
-        "ground_truth_status": "illegible",
+        "ground_truth_status": "present",
         "extracted_status": "present"
       },
       "receipt_number": {
@@ -342,9 +342,9 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 13,
+      "correct": 14,
       "wrong_value": 1,
-      "hallucinated": 1,
+      "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
     }
@@ -420,14 +420,41 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 31819.0,
-              "extracted_value": null
+              "extracted_value": 31819.0
             },
             "amount": {
               "category": "correct",
               "ground_truth_value": 31819.0,
               "extracted_value": 31819.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Nasi + Cripsy Chicken Spicy Mayo",
+              "extracted_value": "Nasi + Cripsy Chicken Spicy Mayo"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 30910.0,
+              "extracted_value": 30910.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 30910.0,
+              "extracted_value": 30910.0
             }
           }
         },
@@ -447,9 +474,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 35455.0,
-              "extracted_value": null
+              "extracted_value": 35455.0
             },
             "amount": {
               "category": "correct",
@@ -474,41 +501,14 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 41819.0,
-              "extracted_value": null
+              "extracted_value": 41819.0
             },
             "amount": {
               "category": "correct",
               "ground_truth_value": 41819.0,
               "extracted_value": 41819.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 1,
-          "extracted_index": 1,
-          "match_score": 0.981,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "Nasi + Crispy Chicken Spicy Mayo",
-              "extracted_value": "Nasi + Cripsy Chicken Spicy Mayo"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 30910.0,
-              "extracted_value": null
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 30910.0,
-              "extracted_value": 30910.0
             }
           }
         }
@@ -517,10 +517,10 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 18,
-      "wrong_value": 1,
+      "correct": 23,
+      "wrong_value": 0,
       "hallucinated": 0,
-      "wrongly_abstained": 4,
+      "wrongly_abstained": 0,
       "missed_status": 0
     }
   },
@@ -595,8 +595,8 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrong_value",
-              "ground_truth_value": 33627.0,
+              "category": "correct",
+              "ground_truth_value": 33637.0,
               "extracted_value": 33637.0
             },
             "amount": {
@@ -690,12 +690,12 @@
         {
           "ground_truth_index": 4,
           "extracted_index": 4,
-          "match_score": 1.0,
+          "match_score": 0.987,
           "fields": {
             "description": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": "Milo Cao Jumbo (Hgt/Es)",
-              "extracted_value": "Milo Cao Jumbo (Hgt/Es)"
+              "extracted_value": "Milo Cao Jumbo (Hgt/ Es)"
             },
             "quantity": {
               "category": "correct",
@@ -730,9 +730,9 @@
     "status": "scored",
     "fields": {
       "vendor_name": {
-        "category": "wrong_value",
+        "category": "correct",
         "ground_truth_value": "Bu Kris Tenggilis",
-        "extracted_value": "Bu Kris Tenggili",
+        "extracted_value": "Bu Kris Tenggilis",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -1002,9 +1002,9 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 38,
+      "correct": 39,
       "wrong_value": 0,
-      "hallucinated": 1,
+      "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
     }
@@ -1013,16 +1013,16 @@
     "status": "scored",
     "fields": {
       "vendor_name": {
-        "category": "correct",
+        "category": "wrong_value",
         "ground_truth_value": "Seniman Mie Kari",
-        "extracted_value": "Seniman Mie Kari",
+        "extracted_value": "Seniman",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
       "receipt_number": {
         "category": "correct",
         "ground_truth_value": "5-30146",
-        "extracted_value": "#5-30146",
+        "extracted_value": "5-30146",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -1080,9 +1080,9 @@
               "extracted_value": 4.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 35000.0,
-              "extracted_value": null
+              "extracted_value": 35000.0
             },
             "amount": {
               "category": "correct",
@@ -1107,9 +1107,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 5000.0,
-              "extracted_value": null
+              "extracted_value": 5000.0
             },
             "amount": {
               "category": "correct",
@@ -1134,9 +1134,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 32000.0,
-              "extracted_value": null
+              "extracted_value": 32000.0
             },
             "amount": {
               "category": "correct",
@@ -1161,9 +1161,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 5000.0,
-              "extracted_value": null
+              "extracted_value": 5000.0
             },
             "amount": {
               "category": "correct",
@@ -1188,9 +1188,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 40000.0,
-              "extracted_value": null
+              "extracted_value": 40000.0
             },
             "amount": {
               "category": "correct",
@@ -1215,9 +1215,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "missed_status",
-              "ground_truth_value": null,
-              "extracted_value": null
+              "category": "correct",
+              "ground_truth_value": 5000,
+              "extracted_value": 5000.0
             },
             "amount": {
               "category": "correct",
@@ -1231,11 +1231,11 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 25,
-      "wrong_value": 0,
+      "correct": 30,
+      "wrong_value": 1,
       "hallucinated": 0,
-      "wrongly_abstained": 5,
-      "missed_status": 1
+      "wrongly_abstained": 0,
+      "missed_status": 0
     }
   },
   "receipt_007": {
@@ -1309,9 +1309,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 26000.0,
-              "extracted_value": null
+              "extracted_value": 26000.0
             },
             "amount": {
               "category": "correct",
@@ -1336,9 +1336,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 26000.0,
-              "extracted_value": null
+              "extracted_value": 26000.0
             },
             "amount": {
               "category": "correct",
@@ -1363,9 +1363,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 26000.0,
-              "extracted_value": null
+              "extracted_value": 26000.0
             },
             "amount": {
               "category": "correct",
@@ -1390,9 +1390,9 @@
               "extracted_value": 2.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 26000.0,
-              "extracted_value": null
+              "extracted_value": 26000.0
             },
             "amount": {
               "category": "correct",
@@ -1417,9 +1417,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 32000.0,
-              "extracted_value": null
+              "extracted_value": 32000.0
             },
             "amount": {
               "category": "correct",
@@ -1444,9 +1444,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 30000.0,
-              "extracted_value": null
+              "extracted_value": 30000.0
             },
             "amount": {
               "category": "correct",
@@ -1471,9 +1471,9 @@
               "extracted_value": 8.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 8000.0,
-              "extracted_value": null
+              "extracted_value": 8000.0
             },
             "amount": {
               "category": "correct",
@@ -1498,9 +1498,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 35000.0,
-              "extracted_value": null
+              "extracted_value": 35000.0
             },
             "amount": {
               "category": "correct",
@@ -1525,9 +1525,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 8000.0,
-              "extracted_value": null
+              "extracted_value": 8000.0
             },
             "amount": {
               "category": "correct",
@@ -1552,9 +1552,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 13000.0,
-              "extracted_value": null
+              "extracted_value": 13000.0
             },
             "amount": {
               "category": "correct",
@@ -1579,9 +1579,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 8000.0,
-              "extracted_value": null
+              "extracted_value": 8000.0
             },
             "amount": {
               "category": "correct",
@@ -1606,9 +1606,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 10000.0,
-              "extracted_value": null
+              "extracted_value": 10000.0
             },
             "amount": {
               "category": "correct",
@@ -1633,9 +1633,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "wrongly_abstained",
+              "category": "correct",
               "ground_truth_value": 9000.0,
-              "extracted_value": null
+              "extracted_value": 9000.0
             },
             "amount": {
               "category": "correct",
@@ -1649,10 +1649,10 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 46,
+      "correct": 59,
       "wrong_value": 0,
       "hallucinated": 0,
-      "wrongly_abstained": 13,
+      "wrongly_abstained": 0,
       "missed_status": 0
     }
   },
@@ -1660,18 +1660,18 @@
     "status": "scored",
     "fields": {
       "vendor_name": {
-        "category": "wrong_value",
+        "category": "correct",
         "ground_truth_value": "PAPA RON'S PIZZA",
-        "extracted_value": "PAPA RON'S PIZZA TRANS ICON MALL SURABAYA",
+        "extracted_value": "PAPA RON'S PIZZA",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
       "receipt_number": {
-        "category": "hallucinated",
+        "category": "correct",
         "ground_truth_value": null,
-        "extracted_value": "141",
+        "extracted_value": null,
         "ground_truth_status": "not_present",
-        "extracted_status": "present"
+        "extracted_status": "not_present"
       },
       "currency": {
         "category": "correct",
@@ -1739,6 +1739,33 @@
           }
         },
         {
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "Sausage Crust (L)",
+              "extracted_value": "Sausage Crust (L)"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 37000.0,
+              "extracted_value": 37000.0
+            }
+          }
+        },
+        {
           "ground_truth_index": 2,
           "extracted_index": 2,
           "match_score": 1.0,
@@ -1791,42 +1818,15 @@
               "extracted_value": 0.0
             }
           }
-        },
-        {
-          "ground_truth_index": 1,
-          "extracted_index": 1,
-          "match_score": 0.967,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "Sausage Crust (L)",
-              "extracted_value": "* Sausage Crust (L)"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": null,
-              "extracted_value": null
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": null,
-              "extracted_value": null
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 37000.0,
-              "extracted_value": 37000.0
-            }
-          }
         }
       ],
       "unmatched_ground_truth": [],
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 20,
-      "wrong_value": 2,
-      "hallucinated": 1,
+      "correct": 23,
+      "wrong_value": 0,
+      "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
     }
@@ -2154,7 +2154,7 @@
       "receipt_number": {
         "category": "wrong_value",
         "ground_truth_value": "T1NN-937",
-        "extracted_value": "4.0.25/T1NN-937/DIDIN/04",
+        "extracted_value": "28. 10. 25-10:11/4. 0. 25/T1NN-937/DIDIN/04",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -2241,14 +2241,14 @@
       "vendor_name": {
         "category": "correct",
         "ground_truth_value": "Indomaret Fresh Manyar Tirtoyoso",
-        "extracted_value": "Indomaret Fresh",
+        "extracted_value": "INDOMARET FRESH",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
       "receipt_number": {
         "category": "correct",
         "ground_truth_value": "T1NN-97349",
-        "extracted_value": "T1NN-97349",
+        "extracted_value": "28.10.25-10:07/4.0.25/T1NN-97349/EKA N/01",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -2267,8 +2267,8 @@
         "extracted_status": "present"
       },
       "subtotal": {
-        "category": "wrong_value",
-        "ground_truth_value": 32950.0,
+        "category": "correct",
+        "ground_truth_value": 35946.0,
         "extracted_value": 35946.0,
         "ground_truth_status": "present",
         "extracted_status": "present"
@@ -2349,8 +2349,8 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 14,
-      "wrong_value": 1,
+      "correct": 15,
+      "wrong_value": 0,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -2369,7 +2369,7 @@
       "receipt_number": {
         "category": "wrong_value",
         "ground_truth_value": "FSFL-915154",
-        "extracted_value": "10.08.26-21:12/4.4.2/FSFL-91554/MUTIA/02",
+        "extracted_value": "10.08.23-21:12/4.4.2/FSFL-915 54/MUTIA/02",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -2381,9 +2381,9 @@
         "extracted_status": "present"
       },
       "transaction_date": {
-        "category": "correct",
+        "category": "wrong_value",
         "ground_truth_value": "2026-08-10",
-        "extracted_value": "2026-08-10",
+        "extracted_value": "2023-08-10",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -2481,9 +2481,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 13000.0,
-              "extracted_value": 13000.0
+              "extracted_value": 10400.0
             },
             "amount": {
               "category": "wrong_value",
@@ -2497,8 +2497,8 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 17,
-      "wrong_value": 2,
+      "correct": 15,
+      "wrong_value": 4,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -2592,7 +2592,7 @@
           "match_score": 0.971,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "AQUA GALON ISI 19 LT",
               "extracted_value": "AQUA GALON ISI 19 LT**"
             },
@@ -2619,7 +2619,7 @@
           "match_score": 0.965,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "CLUB GALON 19 LT",
               "extracted_value": "CLUB GALON 19 LT**"
             },
@@ -2645,8 +2645,8 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 17,
-      "wrong_value": 2,
+      "correct": 19,
+      "wrong_value": 0,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -2802,33 +2802,6 @@
     "line_items": {
       "matched": [
         {
-          "ground_truth_index": 0,
-          "extracted_index": 0,
-          "match_score": 1.0,
-          "fields": {
-            "description": {
-              "category": "correct",
-              "ground_truth_value": "PLANK KALSI 30 POLOS",
-              "extracted_value": "PLANK KALSI 30 POLOS"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 7.0,
-              "extracted_value": 7.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 52000.0,
-              "extracted_value": 52000.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 364000.0,
-              "extracted_value": 364000.0
-            }
-          }
-        },
-        {
           "ground_truth_index": 1,
           "extracted_index": 1,
           "match_score": 1.0,
@@ -2935,14 +2908,41 @@
               "extracted_value": 40000.0
             }
           }
+        },
+        {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 0.97,
+          "fields": {
+            "description": {
+              "category": "wrong_value",
+              "ground_truth_value": "PLANK KALSI 30 POLOS",
+              "extracted_value": "PLANK KALSI 30 FOLOS"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 7.0,
+              "extracted_value": 7.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 52000.0,
+              "extracted_value": 52000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 364000.0,
+              "extracted_value": 364000.0
+            }
+          }
         }
       ],
       "unmatched_ground_truth": [],
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 27,
-      "wrong_value": 0,
+      "correct": 26,
+      "wrong_value": 1,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -3006,12 +3006,12 @@
         {
           "ground_truth_index": 0,
           "extracted_index": 0,
-          "match_score": 1.0,
+          "match_score": 0.954,
           "fields": {
             "description": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": "BRAIDED BDH-104 40 CM FLEXIBLE",
-              "extracted_value": "BRAIDED BDH-104 40 CM FLEXIBLE"
+              "extracted_value": "BRAIDED BDH-104 40 CM FLEXIBLE 40CM"
             },
             "quantity": {
               "category": "correct",
@@ -3019,9 +3019,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 61000.0,
-              "extracted_value": 61000.0
+              "extracted_value": 56791.0
             },
             "amount": {
               "category": "correct",
@@ -3035,8 +3035,8 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 11,
-      "wrong_value": 0,
+      "correct": 9,
+      "wrong_value": 2,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -3234,9 +3234,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 94000.0,
-              "extracted_value": 94000.0
+              "extracted_value": 92120.0
             },
             "amount": {
               "category": "correct",
@@ -3261,9 +3261,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 25000.0,
-              "extracted_value": 25000.0
+              "extracted_value": 24500.0
             },
             "amount": {
               "category": "correct",
@@ -3288,9 +3288,9 @@
               "extracted_value": 10.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 188500.0,
-              "extracted_value": 188500.0
+              "extracted_value": 184730.0
             },
             "amount": {
               "category": "correct",
@@ -3342,9 +3342,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 52400.0,
-              "extracted_value": 52400.0
+              "extracted_value": 42109.0
             },
             "amount": {
               "category": "correct",
@@ -3358,8 +3358,8 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 26,
-      "wrong_value": 1,
+      "correct": 22,
+      "wrong_value": 5,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -3480,7 +3480,7 @@
           "match_score": 0.968,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "KUAS HOME CARE 1,5*",
               "extracted_value": "KUAS HOME CARE 1,5\""
             },
@@ -3507,7 +3507,7 @@
           "match_score": 0.968,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "KUAS HOME CARE 2,5*",
               "extracted_value": "KUAS HOME CARE 2,5\""
             },
@@ -3534,7 +3534,7 @@
           "match_score": 0.965,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "KUAS HOME CARE 2*",
               "extracted_value": "KUAS HOME CARE 2\""
             },
@@ -3563,7 +3563,7 @@
             "description": {
               "category": "wrong_value",
               "ground_truth_value": "AVIAN 0.9L-MATT SUPER BLACK SBM",
-              "extracted_value": "AVIAN 0.9L-MATT SUPER BLACK SPX"
+              "extracted_value": "AVIAN 0.9L-MATT SUPER BLACK SPN"
             },
             "quantity": {
               "category": "correct",
@@ -3587,8 +3587,8 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 27,
-      "wrong_value": 4,
+      "correct": 30,
+      "wrong_value": 1,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -3906,6 +3906,33 @@
     "line_items": {
       "matched": [
         {
+          "ground_truth_index": 0,
+          "extracted_index": 0,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "THINNER ECERAN- A SPESIAL",
+              "extracted_value": "THINNER ECERAN- A SPESIAL"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 4.0,
+              "extracted_value": 4.0
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": 23000.0,
+              "extracted_value": 23000.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 92000.0,
+              "extracted_value": 92000.0
+            }
+          }
+        },
+        {
           "ground_truth_index": 1,
           "extracted_index": 1,
           "match_score": 1.0,
@@ -3931,41 +3958,14 @@
               "extracted_value": 88000.0
             }
           }
-        },
-        {
-          "ground_truth_index": 0,
-          "extracted_index": 0,
-          "match_score": 0.988,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "THINNER ECERAN-A SPESIAL",
-              "extracted_value": "THINNER ECERAN- A SPESIAL"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 4.0,
-              "extracted_value": 4.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 23000.0,
-              "extracted_value": 23000.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 92000.0,
-              "extracted_value": 92000.0
-            }
-          }
         }
       ],
       "unmatched_ground_truth": [],
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 14,
-      "wrong_value": 1,
+      "correct": 15,
+      "wrong_value": 0,
       "hallucinated": 0,
       "wrongly_abstained": 0,
       "missed_status": 0
@@ -4426,11 +4426,11 @@
         "extracted_status": "present"
       },
       "receipt_number": {
-        "category": "correct",
+        "category": "wrongly_abstained",
         "ground_truth_value": "17495-001-0009",
-        "extracted_value": "17495-001-0009",
+        "extracted_value": null,
         "ground_truth_status": "present",
-        "extracted_status": "present"
+        "extracted_status": "not_present"
       },
       "currency": {
         "category": "correct",
@@ -4567,9 +4567,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 16000.0,
-              "extracted_value": 16000.0
+              "extracted_value": 8000.0
             },
             "amount": {
               "category": "correct",
@@ -4594,9 +4594,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 16000.0,
-              "extracted_value": 16000.0
+              "extracted_value": 8000.0
             },
             "amount": {
               "category": "correct",
@@ -4610,10 +4610,10 @@
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 27,
-      "wrong_value": 0,
+      "correct": 24,
+      "wrong_value": 2,
       "hallucinated": 0,
-      "wrongly_abstained": 0,
+      "wrongly_abstained": 1,
       "missed_status": 0
     }
   },
@@ -4628,9 +4628,9 @@
         "extracted_status": "present"
       },
       "receipt_number": {
-        "category": "wrong_value",
+        "category": "correct",
         "ground_truth_value": "498030",
-        "extracted_value": "6926",
+        "extracted_value": "498 49881 6926",
         "ground_truth_status": "present",
         "extracted_status": "present"
       },
@@ -4675,12 +4675,12 @@
         {
           "ground_truth_index": 0,
           "extracted_index": 0,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "SARIMI DUA SOTO 113G",
-              "extracted_value": "36008187 SARIMI DUA SOTO 113G"
+              "extracted_value": "SARIMI DUA SOTO 113G"
             },
             "quantity": {
               "category": "correct",
@@ -4688,9 +4688,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 4390.0,
-              "extracted_value": 4390.0
+              "extracted_value": 4140.0
             },
             "amount": {
               "category": "correct",
@@ -4700,14 +4700,41 @@
           }
         },
         {
-          "ground_truth_index": 4,
-          "extracted_index": 4,
-          "match_score": 0.89,
+          "ground_truth_index": 1,
+          "extracted_index": 1,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DRINK YGHT GR",
-              "extracted_value": "61813394 CIMORY DRINK YGHT GR"
+              "category": "correct",
+              "ground_truth_value": "MAYUMI MAYO SCH100G",
+              "extracted_value": "MAYUMI MAYO SCH100G"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 8290.0,
+              "extracted_value": 8290.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 2,
+          "extracted_index": 2,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "TANGO WFR CHO 100G",
+              "extracted_value": "TANGO WFR CHO 100G"
             },
             "quantity": {
               "category": "correct",
@@ -4715,26 +4742,107 @@
               "extracted_value": 1.0
             },
             "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 8690.0,
+              "extracted_value": 6900.0
+            },
+            "amount": {
               "category": "correct",
+              "ground_truth_value": 6900.0,
+              "extracted_value": 6900.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 3,
+          "extracted_index": 3,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "LOKO TOAST BREAD",
+              "extracted_value": "LOKO TOAST BREAD"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 34000.0,
+              "extracted_value": 27500.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 27500.0,
+              "extracted_value": 27500.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 4,
+          "extracted_index": 4,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "CIMORY DRINK YGHT GR",
+              "extracted_value": "CIMORY DRINK YGHT GR"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
               "ground_truth_value": 7890.0,
-              "extracted_value": 7890.0
+              "extracted_value": 6850.0
             },
             "amount": {
               "category": "correct",
               "ground_truth_value": 6850.0,
               "extracted_value": 6850.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 5,
+          "extracted_index": 5,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "CIMORY DY ZERO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 6750.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
             }
           }
         },
         {
           "ground_truth_index": 6,
           "extracted_index": 6,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "CIMORY DRINK YGHT LE",
-              "extracted_value": "61814893 CIMORY DRINK YGHT LE"
+              "extracted_value": "CIMORY DRINK YGHT LE"
             },
             "quantity": {
               "category": "correct",
@@ -4742,9 +4850,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 7890.0,
-              "extracted_value": 7890.0
+              "extracted_value": 6850.0
             },
             "amount": {
               "category": "correct",
@@ -4754,23 +4862,77 @@
           }
         },
         {
-          "ground_truth_index": 9,
-          "extracted_index": 9,
-          "match_score": 0.89,
+          "ground_truth_index": 7,
+          "extracted_index": 7,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "KG MALKIST ABONCR125",
-              "extracted_value": "36548031 KG MALKIST ABONCR125"
+              "category": "correct",
+              "ground_truth_value": "SARIMIE GORENG AYAM",
+              "extracted_value": "SARIMIE GORENG AYAM"
             },
             "quantity": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 1.0,
+              "category": "correct",
+              "ground_truth_value": null,
               "extracted_value": null
             },
             "unit_price": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 9890.0,
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 4190.0,
+              "extracted_value": 4190.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 8,
+          "extracted_index": 8,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "CIMORY DY ZERO"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 6750.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 9,
+          "extracted_index": 9,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "KG MALKIST ABONCR125",
+              "extracted_value": "KG MALKIST ABONCR125"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": null,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "correct",
+              "ground_truth_value": null,
               "extracted_value": null
             },
             "amount": {
@@ -4781,14 +4943,14 @@
           }
         },
         {
-          "ground_truth_index": 11,
-          "extracted_index": 11,
-          "match_score": 0.89,
+          "ground_truth_index": 10,
+          "extracted_index": 10,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DRINK YGHT ST",
-              "extracted_value": "61813429 CIMORY DRINK YGHT ST"
+              "category": "correct",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "CIMORY DY ZERO"
             },
             "quantity": {
               "category": "correct",
@@ -4796,9 +4958,36 @@
               "extracted_value": 1.0
             },
             "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 6750.0
+            },
+            "amount": {
               "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 11,
+          "extracted_index": 11,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "CIMORY DRINK YGHT ST",
+              "extracted_value": "CIMORY DRINK YGHT ST"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
               "ground_truth_value": 7890.0,
-              "extracted_value": 7890.0
+              "extracted_value": 6850.0
             },
             "amount": {
               "category": "correct",
@@ -4810,12 +4999,12 @@
         {
           "ground_truth_index": 12,
           "extracted_index": 12,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "SARIMI DUA RASA BASO",
-              "extracted_value": "36010414 SARIMI DUA RASA BASO"
+              "extracted_value": "SARIMI DUA RASA BASO"
             },
             "quantity": {
               "category": "correct",
@@ -4823,9 +5012,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 4290.0,
-              "extracted_value": 4290.0
+              "extracted_value": 4040.0
             },
             "amount": {
               "category": "correct",
@@ -4837,12 +5026,12 @@
         {
           "ground_truth_index": 13,
           "extracted_index": 13,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "POTABEE BARBEQUE 65G",
-              "extracted_value": "36447391 POTABEE BARBEQUE 65G"
+              "extracted_value": "POTABEE BARBEQUE 65G"
             },
             "quantity": {
               "category": "correct",
@@ -4850,9 +5039,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 10490.0,
-              "extracted_value": 10490.0
+              "extracted_value": 9500.0
             },
             "amount": {
               "category": "correct",
@@ -4862,14 +5051,41 @@
           }
         },
         {
-          "ground_truth_index": 18,
-          "extracted_index": 18,
-          "match_score": 0.89,
+          "ground_truth_index": 14,
+          "extracted_index": 14,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DRINK YGHT BL",
-              "extracted_value": "61823141 CIMORY DRINK YGHT BL"
+              "category": "correct",
+              "ground_truth_value": "MALKIST ABON 126G",
+              "extracted_value": "MALKIST ABON 126G"
+            },
+            "quantity": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 1.0,
+              "extracted_value": null
+            },
+            "unit_price": {
+              "category": "wrongly_abstained",
+              "ground_truth_value": 7390.0,
+              "extracted_value": null
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 7390.0,
+              "extracted_value": 7390.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 15,
+          "extracted_index": 15,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "CIMORY DY ZERO",
+              "extracted_value": "CIMORY DY ZERO"
             },
             "quantity": {
               "category": "correct",
@@ -4877,9 +5093,90 @@
               "extracted_value": 1.0
             },
             "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 8590.0,
+              "extracted_value": 6750.0
+            },
+            "amount": {
               "category": "correct",
+              "ground_truth_value": 6750.0,
+              "extracted_value": 6750.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 16,
+          "extracted_index": 16,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "JF CRINKLE 900GR",
+              "extracted_value": "JF CRINKLE 900GR"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 44990.0,
+              "extracted_value": 29900.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 29900.0,
+              "extracted_value": 29900.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 17,
+          "extracted_index": 17,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "DAHLIA TEH KTR 75G",
+              "extracted_value": "DAHLIA TEH KTR 75G"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 3.0,
+              "extracted_value": 3.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
+              "ground_truth_value": 14190.0,
+              "extracted_value": 12060.0
+            },
+            "amount": {
+              "category": "correct",
+              "ground_truth_value": 36180.0,
+              "extracted_value": 36180.0
+            }
+          }
+        },
+        {
+          "ground_truth_index": 18,
+          "extracted_index": 18,
+          "match_score": 1.0,
+          "fields": {
+            "description": {
+              "category": "correct",
+              "ground_truth_value": "CIMORY DRINK YGHT BL",
+              "extracted_value": "CIMORY DRINK YGHT BL"
+            },
+            "quantity": {
+              "category": "correct",
+              "ground_truth_value": 1.0,
+              "extracted_value": 1.0
+            },
+            "unit_price": {
+              "category": "wrong_value",
               "ground_truth_value": 7890.0,
-              "extracted_value": 7890.0
+              "extracted_value": 6850.0
             },
             "amount": {
               "category": "correct",
@@ -4891,12 +5188,12 @@
         {
           "ground_truth_index": 19,
           "extracted_index": 19,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "INDOMIE KARI AYAM 72",
-              "extracted_value": "36038369 INDOMIE KARI AYAM 72"
+              "extracted_value": "INDOMIE KARI AYAM 72"
             },
             "quantity": {
               "category": "correct",
@@ -4918,12 +5215,12 @@
         {
           "ground_truth_index": 20,
           "extracted_index": 20,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "SUNLIGHT LIME PC1500",
-              "extracted_value": "35703007 SUNLIGHT LIME PC1500"
+              "extracted_value": "SUNLIGHT LIME PC1500"
             },
             "quantity": {
               "category": "correct",
@@ -4931,9 +5228,9 @@
               "extracted_value": 1.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 22390.0,
-              "extracted_value": 22390.0
+              "extracted_value": 19500.0
             },
             "amount": {
               "category": "correct",
@@ -4945,12 +5242,12 @@
         {
           "ground_truth_index": 21,
           "extracted_index": 21,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "SARIMI DUA GORENG AY",
-              "extracted_value": "36009828 SARIMI DUA GORENG AY"
+              "extracted_value": "SARIMI DUA GORENG AY"
             },
             "quantity": {
               "category": "correct",
@@ -4958,9 +5255,9 @@
               "extracted_value": 4.0
             },
             "unit_price": {
-              "category": "correct",
+              "category": "wrong_value",
               "ground_truth_value": 4190.0,
-              "extracted_value": 4190.0
+              "extracted_value": 3940.0
             },
             "amount": {
               "category": "correct",
@@ -4972,12 +5269,12 @@
         {
           "ground_truth_index": 22,
           "extracted_index": 22,
-          "match_score": 0.89,
+          "match_score": 1.0,
           "fields": {
             "description": {
-              "category": "wrong_value",
+              "category": "correct",
               "ground_truth_value": "E COMM HYPERMART ONL",
-              "extracted_value": "98511016 E COMM HYPERMART ONL"
+              "extracted_value": "E COMM HYPERMART ONL"
             },
             "quantity": {
               "category": "correct",
@@ -4995,313 +5292,16 @@
               "extracted_value": 0.0
             }
           }
-        },
-        {
-          "ground_truth_index": 1,
-          "extracted_index": 1,
-          "match_score": 0.885,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "MAYUMI MAYO SCH100G",
-              "extracted_value": "36328546 MAYUMI MAYO SCH100G"
-            },
-            "quantity": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 1.0,
-              "extracted_value": null
-            },
-            "unit_price": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 8290.0,
-              "extracted_value": null
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 8290.0,
-              "extracted_value": 8290.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 7,
-          "extracted_index": 7,
-          "match_score": 0.885,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "SARIMIE GORENG AYAM",
-              "extracted_value": "36017980 SARIMIE GORENG AYAM"
-            },
-            "quantity": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 1.0,
-              "extracted_value": null
-            },
-            "unit_price": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 4190.0,
-              "extracted_value": null
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 4190.0,
-              "extracted_value": 4190.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 2,
-          "extracted_index": 2,
-          "match_score": 0.88,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "TANGO WFR CHO 100G",
-              "extracted_value": "36512328 TANGO WFR CHO 100G"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 8690.0,
-              "extracted_value": 8690.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 6900.0,
-              "extracted_value": 6900.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 17,
-          "extracted_index": 17,
-          "match_score": 0.88,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "DAHLIA TEH KTR 75G",
-              "extracted_value": "35681639 DAHLIA TEH KTR 75G"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 3.0,
-              "extracted_value": 3.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 14190.0,
-              "extracted_value": 14190.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 36180.0,
-              "extracted_value": 36180.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 14,
-          "extracted_index": 14,
-          "match_score": 0.874,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "MALKIST ABON 126G",
-              "extracted_value": "36517645 MALKIST ABON 126G"
-            },
-            "quantity": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 1.0,
-              "extracted_value": null
-            },
-            "unit_price": {
-              "category": "wrongly_abstained",
-              "ground_truth_value": 7390.0,
-              "extracted_value": null
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 7390.0,
-              "extracted_value": 7390.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 3,
-          "extracted_index": 3,
-          "match_score": 0.868,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "LOKO TOAST BREAD",
-              "extracted_value": "92100668 LOKO TOAST BREAD"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 34000.0,
-              "extracted_value": 34000.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 27500.0,
-              "extracted_value": 27500.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 16,
-          "extracted_index": 16,
-          "match_score": 0.868,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "JF CRINKLE 900GR",
-              "extracted_value": "69903255 JF CRINKLE 900GR"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 44990.0,
-              "extracted_value": 44990.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 29900.0,
-              "extracted_value": 29900.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 5,
-          "extracted_index": 5,
-          "match_score": 0.854,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DY ZERO",
-              "extracted_value": "61835174 CIMORY DY ZERO"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 8590.0,
-              "extracted_value": 8590.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 6750.0,
-              "extracted_value": 6750.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 8,
-          "extracted_index": 8,
-          "match_score": 0.854,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DY ZERO",
-              "extracted_value": "61835209 CIMORY DY ZERO"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 8590.0,
-              "extracted_value": 8590.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 6750.0,
-              "extracted_value": 6750.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 10,
-          "extracted_index": 10,
-          "match_score": 0.854,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DY ZERO",
-              "extracted_value": "61835183 CIMORY DY ZERO"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 8590.0,
-              "extracted_value": 8590.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 6750.0,
-              "extracted_value": 6750.0
-            }
-          }
-        },
-        {
-          "ground_truth_index": 15,
-          "extracted_index": 15,
-          "match_score": 0.854,
-          "fields": {
-            "description": {
-              "category": "wrong_value",
-              "ground_truth_value": "CIMORY DY ZERO",
-              "extracted_value": "61835192 CIMORY DY ZERO"
-            },
-            "quantity": {
-              "category": "correct",
-              "ground_truth_value": 1.0,
-              "extracted_value": 1.0
-            },
-            "unit_price": {
-              "category": "correct",
-              "ground_truth_value": 8590.0,
-              "extracted_value": 8590.0
-            },
-            "amount": {
-              "category": "correct",
-              "ground_truth_value": 6750.0,
-              "extracted_value": 6750.0
-            }
-          }
         }
       ],
       "unmatched_ground_truth": [],
       "unmatched_extracted": []
     },
     "category_counts": {
-      "correct": 67,
-      "wrong_value": 24,
+      "correct": 80,
+      "wrong_value": 17,
       "hallucinated": 0,
-      "wrongly_abstained": 8,
+      "wrongly_abstained": 2,
       "missed_status": 0
     }
   }
