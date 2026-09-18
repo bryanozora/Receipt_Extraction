@@ -274,23 +274,23 @@ def _build_response_schema() -> dict:
 
 _RESPONSE_SCHEMA = _build_response_schema()
 
-# Step 12 optimization knob: constrains gemini-3.6-flash's internal
-# "thinking" token budget, which Step 8's latency investigation identified
-# as the dominant cost of a slow call (a single-item receipt spent ~1,656
-# thinking tokens vs. 855 candidate tokens; receipt_026's 23-item, 2-image
-# call spent 3,300-4,100). types.ThinkingConfig exposes two distinct knobs
-# and it isn't yet confirmed which one gemini-3.6-flash actually honors:
-# - thinking_budget: an explicit token count (0 disables thinking, -1
-#   requests "automatic"; allowed ranges are model-dependent per the SDK's
-#   own docstring).
-# - thinking_level: a coarser MINIMAL/LOW/MEDIUM/HIGH enum, the newer
-#   Gemini-3-style interface that may supersede thinking_budget for this
-#   model family.
-# Left as the whole types.ThinkingConfig object (not pre-committed to one
-# knob) so the live comparison can try either. None (default) means
-# unconstrained -- current, unchanged behavior; extract_receipt() itself
-# doesn't change unless this is explicitly set to something else.
-THINKING_CONFIG: types.ThinkingConfig | None = None
+# Step 12 optimization, now the active default: constrains gemini-3.6-flash's
+# internal "thinking" token budget, which Step 8's latency investigation
+# identified as the dominant cost of a slow call (a single-item receipt
+# spent ~1,656 thinking tokens vs. 855 candidate tokens; receipt_026's
+# 23-item, 2-image call spent 3,300-4,100). Of the two knobs types.
+# ThinkingConfig exposes (thinking_budget: an explicit token count, vs.
+# thinking_level: a coarser MINIMAL/LOW/MEDIUM/HIGH enum), a live comparison
+# in scripts/test_thinking_optimization.py found thinking_level=LOW measurably
+# reduced both cost and latency with no accuracy loss observed: 58%/39%
+# latency reduction and 21%/47% token reduction across the two test
+# receipts (one simple single-image, one complex multi-image). This was
+# only checked against 2 receipts, not the full 26-receipt eval dataset --
+# worth re-validating with a full eval run if accuracy regressions show up
+# later. To go back to unconstrained thinking, set this to None.
+THINKING_CONFIG: types.ThinkingConfig | None = types.ThinkingConfig(
+    thinking_level=types.ThinkingLevel.LOW
+)
 
 _GENERATE_CONFIG = types.GenerateContentConfig(
     system_instruction=SYSTEM_INSTRUCTION,
