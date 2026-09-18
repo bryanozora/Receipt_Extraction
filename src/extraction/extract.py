@@ -274,6 +274,24 @@ def _build_response_schema() -> dict:
 
 _RESPONSE_SCHEMA = _build_response_schema()
 
+# Step 12 optimization knob: constrains gemini-3.6-flash's internal
+# "thinking" token budget, which Step 8's latency investigation identified
+# as the dominant cost of a slow call (a single-item receipt spent ~1,656
+# thinking tokens vs. 855 candidate tokens; receipt_026's 23-item, 2-image
+# call spent 3,300-4,100). types.ThinkingConfig exposes two distinct knobs
+# and it isn't yet confirmed which one gemini-3.6-flash actually honors:
+# - thinking_budget: an explicit token count (0 disables thinking, -1
+#   requests "automatic"; allowed ranges are model-dependent per the SDK's
+#   own docstring).
+# - thinking_level: a coarser MINIMAL/LOW/MEDIUM/HIGH enum, the newer
+#   Gemini-3-style interface that may supersede thinking_budget for this
+#   model family.
+# Left as the whole types.ThinkingConfig object (not pre-committed to one
+# knob) so the live comparison can try either. None (default) means
+# unconstrained -- current, unchanged behavior; extract_receipt() itself
+# doesn't change unless this is explicitly set to something else.
+THINKING_CONFIG: types.ThinkingConfig | None = None
+
 _GENERATE_CONFIG = types.GenerateContentConfig(
     system_instruction=SYSTEM_INSTRUCTION,
     response_mime_type="application/json",
@@ -281,6 +299,7 @@ _GENERATE_CONFIG = types.GenerateContentConfig(
     # Low temperature: this is an extraction task, not a creative one --
     # faithfulness to the document matters more than varied phrasing.
     temperature=0.1,
+    thinking_config=THINKING_CONFIG,
 )
 
 # Exponential backoff delays (seconds) applied before each retry of a single

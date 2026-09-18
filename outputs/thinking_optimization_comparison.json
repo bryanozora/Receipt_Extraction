@@ -1,0 +1,1797 @@
+[
+  {
+    "receipt_id": "receipt_001",
+    "config": "baseline (unconstrained)",
+    "latency_seconds": 37.34842969999954,
+    "token_usage": {
+      "prompt_token_count": 0,
+      "candidates_token_count": 0,
+      "thoughts_token_count": 0,
+      "cached_content_token_count": 0,
+      "tool_use_prompt_token_count": 0,
+      "total_token_count": 0
+    },
+    "result_type": "ExtractionError",
+    "result": {
+      "image_paths": [
+        "Raw Data\\receipt_001.jpeg"
+      ],
+      "failure_stage": "api_failure",
+      "message": "Gemini API call failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    }
+  },
+  {
+    "receipt_id": "receipt_001",
+    "config": "thinking_budget=0",
+    "latency_seconds": 13.656115100002353,
+    "token_usage": {
+      "prompt_token_count": 3105,
+      "candidates_token_count": 867,
+      "thoughts_token_count": 0,
+      "cached_content_token_count": 0,
+      "tool_use_prompt_token_count": 0,
+      "total_token_count": 3972
+    },
+    "result_type": "ReceiptExtraction",
+    "result": {
+      "vendor_name": {
+        "value": "BABI GULING PANDE EGI",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "transaction_date": {
+        "value": "2026-09-13",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "receipt_number": {
+        "value": null,
+        "confidence": 0.0,
+        "status": "not_present",
+        "reason": "No receipt number printed on receipt."
+      },
+      "currency": {
+        "value": "IDR",
+        "confidence": 0.9,
+        "status": "present",
+        "reason": "Inferred from store location in Bali, Indonesia."
+      },
+      "subtotal": {
+        "value": 246000.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "tax": {
+        "value": 24600.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "total": {
+        "value": 270600.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "line_items": [
+        {
+          "description": {
+            "value": "babi guling biasa",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 3.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 26000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from amount / quantity."
+          },
+          "amount": {
+            "value": 78000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "babi guling special",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 42000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from amount / quantity."
+          },
+          "amount": {
+            "value": 42000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "es teh markisa",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 18000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from amount / quantity."
+          },
+          "amount": {
+            "value": 18000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "kelapa utuh dingin",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 2.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 30000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from amount / quantity."
+          },
+          "amount": {
+            "value": 60000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "leci tea",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 20000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from amount / quantity."
+          },
+          "amount": {
+            "value": 20000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "gelato massimo",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 28000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from amount / quantity."
+          },
+          "amount": {
+            "value": 28000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        }
+      ],
+      "subtotal_tax_total_consistent": true
+    }
+  },
+  {
+    "receipt_id": "receipt_001",
+    "config": "thinking_level=LOW",
+    "latency_seconds": 8.175683100002061,
+    "token_usage": {
+      "prompt_token_count": 3105,
+      "candidates_token_count": 872,
+      "thoughts_token_count": 0,
+      "cached_content_token_count": 0,
+      "tool_use_prompt_token_count": 0,
+      "total_token_count": 3977
+    },
+    "result_type": "ReceiptExtraction",
+    "result": {
+      "vendor_name": {
+        "value": "BABI GULING PANDE EGI",
+        "confidence": 0.99,
+        "status": "present",
+        "reason": null
+      },
+      "transaction_date": {
+        "value": "2026-09-13",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "receipt_number": {
+        "value": null,
+        "confidence": 0.0,
+        "status": "not_present",
+        "reason": "No receipt number printed on the receipt."
+      },
+      "currency": {
+        "value": "IDR",
+        "confidence": 0.9,
+        "status": "present",
+        "reason": "Inferred from Indonesian text and formatting."
+      },
+      "subtotal": {
+        "value": 246000.0,
+        "confidence": 0.99,
+        "status": "present",
+        "reason": null
+      },
+      "tax": {
+        "value": 24600.0,
+        "confidence": 0.99,
+        "status": "present",
+        "reason": null
+      },
+      "total": {
+        "value": 270600.0,
+        "confidence": 0.99,
+        "status": "present",
+        "reason": null
+      },
+      "line_items": [
+        {
+          "description": {
+            "value": "babi guling biasa",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 3.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 26000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from total amount and quantity."
+          },
+          "amount": {
+            "value": 78000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "babi guling special",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 42000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from total amount and quantity."
+          },
+          "amount": {
+            "value": 42000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "es teh markisa",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 18000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from total amount and quantity."
+          },
+          "amount": {
+            "value": 18000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "kelapa utuh dingin",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 2.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 30000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from total amount and quantity."
+          },
+          "amount": {
+            "value": 60000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "leci tea",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 20000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from total amount and quantity."
+          },
+          "amount": {
+            "value": 20000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "gelato massimo",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 28000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": "Computed from total amount and quantity."
+          },
+          "amount": {
+            "value": 28000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        }
+      ],
+      "subtotal_tax_total_consistent": true
+    }
+  },
+  {
+    "receipt_id": "receipt_026",
+    "config": "baseline (unconstrained)",
+    "latency_seconds": 31.260678300001018,
+    "token_usage": {
+      "prompt_token_count": 0,
+      "candidates_token_count": 0,
+      "thoughts_token_count": 0,
+      "cached_content_token_count": 0,
+      "tool_use_prompt_token_count": 0,
+      "total_token_count": 0
+    },
+    "result_type": "ExtractionError",
+    "result": {
+      "image_paths": [
+        "Raw Data\\receipt_026_p1.jpeg",
+        "Raw Data\\receipt_026_p2.jpeg"
+      ],
+      "failure_stage": "api_failure",
+      "message": "Gemini API call failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    }
+  },
+  {
+    "receipt_id": "receipt_026",
+    "config": "thinking_budget=0",
+    "latency_seconds": 27.727892499999143,
+    "token_usage": {
+      "prompt_token_count": 4169,
+      "candidates_token_count": 2719,
+      "thoughts_token_count": 0,
+      "cached_content_token_count": 0,
+      "tool_use_prompt_token_count": 0,
+      "total_token_count": 6888
+    },
+    "result_type": "ReceiptExtraction",
+    "result": {
+      "vendor_name": {
+        "value": "HYPERMART AR HAKIM",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "transaction_date": {
+        "value": "2026-07-04",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "receipt_number": {
+        "value": "498 49881 6926 498030",
+        "confidence": 0.9,
+        "status": "present",
+        "reason": null
+      },
+      "currency": {
+        "value": "IDR",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": "Inferred from Indonesian vendor name and PPN/DPP structure."
+      },
+      "subtotal": {
+        "value": 228405.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "tax": {
+        "value": 25125.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "total": {
+        "value": 253530.0,
+        "confidence": 0.99,
+        "status": "present",
+        "reason": null
+      },
+      "line_items": [
+        {
+          "description": {
+            "value": "SARIMI DUA SOTO 113G",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 4390.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 4140.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "MAYUMI MAYO SCH100G",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly listed for this row."
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not present to derive unit price."
+          },
+          "amount": {
+            "value": 8290.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "TANGO WFR CHO 100G",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8690.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6900.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "LOKO TOAST BREAD",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 34000.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 27500.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT GR",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT LE",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SARIMIE GORENG AYAM",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly listed for this row."
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not present to derive unit price."
+          },
+          "amount": {
+            "value": 4190.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "KG MALKIST ABONCR125",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly listed for this row."
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not present to derive unit price."
+          },
+          "amount": {
+            "value": 9890.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT ST",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SARIMI DUA RASA BASO",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 4290.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 4040.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "POTABEE BARBEQUE 65G",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 10490.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 9500.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "MALKIST ABON 126G",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly listed for this row."
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not present to derive unit price."
+          },
+          "amount": {
+            "value": 7390.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "JF CRINKLE 900GR",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 44990.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 29900.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "DAHLIA TEH KTR 75G",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 3.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 14190.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 36180.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT BL",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "INDOMIE KARI AYAM 72",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 5.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 3190.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 15950.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SUNLIGHT LIME PC1500",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 22390.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 19500.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SARIMI DUA GORENG AY",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 4.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 4190.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 15760.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "E COMM HYPERMART ONL",
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not present."
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not present to derive unit price."
+          },
+          "amount": {
+            "value": 0.0,
+            "confidence": 0.95,
+            "status": "present",
+            "reason": null
+          }
+        }
+      ],
+      "subtotal_tax_total_consistent": true
+    }
+  },
+  {
+    "receipt_id": "receipt_026",
+    "config": "thinking_level=LOW",
+    "latency_seconds": 21.891343999999663,
+    "token_usage": {
+      "prompt_token_count": 4169,
+      "candidates_token_count": 2727,
+      "thoughts_token_count": 0,
+      "cached_content_token_count": 0,
+      "tool_use_prompt_token_count": 0,
+      "total_token_count": 6896
+    },
+    "result_type": "ReceiptExtraction",
+    "result": {
+      "vendor_name": {
+        "value": "HYPERMART AR HAKIM",
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "transaction_date": {
+        "value": "2026-07-04",
+        "confidence": 0.95,
+        "status": "present",
+        "reason": null
+      },
+      "receipt_number": {
+        "value": null,
+        "confidence": 0.0,
+        "status": "not_present",
+        "reason": "Only register/pos/cashier numbers (498 49881 6926 498030) are printed without explicit receipt label"
+      },
+      "currency": {
+        "value": "IDR",
+        "confidence": 0.9,
+        "status": "present",
+        "reason": "Inferred from Indonesian language and retail store format"
+      },
+      "subtotal": {
+        "value": 228405.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "tax": {
+        "value": 25125.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "total": {
+        "value": 253530.0,
+        "confidence": 0.98,
+        "status": "present",
+        "reason": null
+      },
+      "line_items": [
+        {
+          "description": {
+            "value": "SARIMI DUA SOTO 113G",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 4390.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 4140.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "MAYUMI MAYO SCH100G",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly stated for this row"
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Unit price not explicitly printed"
+          },
+          "amount": {
+            "value": 8290.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "TANGO WFR CHO 100G",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8690.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6900.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "LOKO TOAST BREAD",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 34000.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 27500.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT GR",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT LE",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SARIMIE GORENG AYAM",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly stated for this row"
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Unit price not explicitly printed"
+          },
+          "amount": {
+            "value": 4190.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "KG MALKIST ABONCR125",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly stated for this row"
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Unit price not explicitly printed"
+          },
+          "amount": {
+            "value": 9890.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT ST",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SARIMI DUA RASA BASO",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 4290.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 4040.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "POTABEE BARBEQUE 65G",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 10490.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 9500.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "MALKIST ABON 126G",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly stated for this row"
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Unit price not explicitly printed"
+          },
+          "amount": {
+            "value": 7390.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DY ZERO",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 8590.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6750.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "JF CRINKLE 900GR",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 44990.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 29900.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "DAHLIA TEH KTR 75G",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 3.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 14190.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 36180.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "CIMORY DRINK YGHT BL",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 7890.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 6850.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "INDOMIE KARI AYAM 72",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 5.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 3190.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 15950.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SUNLIGHT LIME PC1500",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 1.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 22390.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 19500.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "SARIMI DUA GORENG AY",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": 4.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "unit_price": {
+            "value": 4190.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "amount": {
+            "value": 15760.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        },
+        {
+          "description": {
+            "value": "E COMM HYPERMART ONL",
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          },
+          "quantity": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Quantity not explicitly stated for this row"
+          },
+          "unit_price": {
+            "value": null,
+            "confidence": 0.0,
+            "status": "not_present",
+            "reason": "Unit price not explicitly printed"
+          },
+          "amount": {
+            "value": 0.0,
+            "confidence": 0.98,
+            "status": "present",
+            "reason": null
+          }
+        }
+      ],
+      "subtotal_tax_total_consistent": true
+    }
+  }
+]
