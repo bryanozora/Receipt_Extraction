@@ -1,0 +1,657 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "HYPERMART AR HAKIM",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-07-04",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "498 49881 6926 498030",
+      "confidence": 0.85,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 228405.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 25125.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 253530.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "SARIMI DUA SOTO 113G",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 4390.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 4140.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "MAYUMI MAYO SCH100G",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Quantity not explicitly printed on receipt."
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price not printed and quantity is missing."
+        },
+        "amount": {
+          "value": 8290.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "TANGO WFR CHO 100G",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8690.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6900.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "LOKO TOAST BREAD",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 34000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 27500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DRINK YGHT GR",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 7890.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6850.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DY ZERO",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8590.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6750.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DRINK YGHT LE",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 7890.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6850.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SARIMIE GORENG AYAM",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Quantity not explicitly printed on receipt."
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price not printed and quantity is missing."
+        },
+        "amount": {
+          "value": 4190.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DY ZERO",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8590.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6750.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "KG MALKIST ABONCR125",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Quantity not explicitly printed on receipt."
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price not printed and quantity is missing."
+        },
+        "amount": {
+          "value": 9890.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DY ZERO",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8590.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6750.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DRINK YGHT ST",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 7890.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6850.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SARIMI DUA RASA BASO",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 4290.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 4040.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "POTABEE BARBEQUE 65G",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 10490.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 9500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "MALKIST ABON 126G",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Quantity not explicitly printed on receipt."
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price not printed and quantity is missing."
+        },
+        "amount": {
+          "value": 7390.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DY ZERO",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 8590.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6750.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "JF CRINKLE 900GR",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 44990.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 29900.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "DAHLIA TEH KTR 75G",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 3.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 14190.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 36180.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "CIMORY DRINK YGHT BL",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 7890.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 6850.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "INDOMIE KARI AYAM 72",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 5.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 3190.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 15950.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SUNLIGHT LIME PC1500",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 22390.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 19500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "SARIMI DUA GORENG AY",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 4.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 4190.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 15760.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "E COMM HYPERMART ONL",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Quantity not explicitly printed on receipt."
+        },
+        "unit_price": {
+          "value": null,
+          "confidence": 0.0,
+          "status": "not_present",
+          "reason": "Unit price not printed and quantity is missing."
+        },
+        "amount": {
+          "value": 0.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 36.047752700000274,
+  "token_usage": {
+    "prompt_token_count": 4169,
+    "candidates_token_count": 2675,
+    "thoughts_token_count": 6244,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 13088
+  }
+}

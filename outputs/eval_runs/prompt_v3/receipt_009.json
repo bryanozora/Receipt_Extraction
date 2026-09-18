@@ -1,0 +1,293 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Solaria",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2024-12-31",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "396RC1122024/02790",
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": "Inferred from store location, language, and currency formatting."
+    },
+    "subtotal": {
+      "value": 141821.0,
+      "confidence": 0.85,
+      "status": "present",
+      "reason": "Calculated post-discount pre-tax subtotal to maintain mathematical consistency with tax and total."
+    },
+    "tax": {
+      "value": 28364.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 170100.0,
+      "confidence": 0.99,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Chicken Cordon Bleu + French Fries Dan Salad",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 48182.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 48182.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Chicken Cordon Bleu + Nasi Dan Salad",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 48182.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 48182.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Goreng",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 31819.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 31819.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Goreng Sapi Cabe Ijo",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 41819.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 41819.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Nasi Goreng Sosis",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 40910.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 40910.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Taro milk Shake",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 23637.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 23637.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Thai Tea",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 20001.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 20001.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Milk Shake Vanilla",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 20001.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 20001.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      },
+      {
+        "description": {
+          "value": "Es Teh Manis",
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 9091.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": "Computed from amount / quantity."
+        },
+        "amount": {
+          "value": 9091.0,
+          "confidence": 0.99,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 22.417798500000572,
+  "token_usage": {
+    "prompt_token_count": 2996,
+    "candidates_token_count": 1228,
+    "thoughts_token_count": 1873,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 6097
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Depo Bangunan",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-08-06",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "63200623",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 1807234.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 198796.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 2006030.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "FLEXI SUPER BLUE 5/8IN -10M",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 94000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 92120.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Amount calculated after applying printed item discount."
+        }
+      },
+      {
+        "description": {
+          "value": "INB007 7W LED BULB DAYL PACK/3",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 52400.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 42109.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Amount calculated after applying printed item discounts."
+        }
+      },
+      {
+        "description": {
+          "value": "PORKLIN HEAVY DUTY NON PERFUME",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 25000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 24500.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Amount calculated after applying printed item discount."
+        }
+      },
+      {
+        "description": {
+          "value": "VALE KW1 1.44M2 CREAM",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 10.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 188500.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 1847300.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": "Amount calculated after applying printed item discount."
+        }
+      },
+      {
+        "description": {
+          "value": "WAREHOUSE NOTICE",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 17.668442300000606,
+  "token_usage": {
+    "prompt_token_count": 3105,
+    "candidates_token_count": 1387,
+    "thoughts_token_count": 1635,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 6127
+  }
+}

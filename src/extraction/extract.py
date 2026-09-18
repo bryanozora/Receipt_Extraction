@@ -68,6 +68,15 @@ arithmetic didn't plausibly fit (e.g. the discount exceeded that item's price) -
 forced attribution is disallowed, in favor of best judgment, lower confidence, and a noted
 ambiguity in reason.
 
+One more fix, from the prompt_v2 scorecard: the unit_price-derivation rule and the
+discount-consolidation rule were interacting badly -- deriving unit_price as amount / quantity
+silently produced a *discounted* unit price whenever amount had already been reduced by a
+discount on that row. unit_price must always be the item's original, pre-discount per-unit
+price; amount is the only field a discount should ever change. The derivation rule now divides
+the original pre-discount price (the same one the discount was calculated from) by quantity,
+and falls back to not_present if that original price can't be recovered, rather than deriving an
+incorrect discounted value.
+
 Resilience: low-confidence success vs. hard failure
 -----------------------------------------------------
 These are two different things and this module keeps them distinct:
@@ -206,11 +215,16 @@ name (e.g. "36512328 TANGO WFR CHO 100G"). Exclude the leading SKU/code from des
 only the human-readable item name (e.g. "TANGO WFR CHO 100G").
 
 Unit price is often not printed explicitly, but it can be a legitimate derived fact rather than \
-a guess: if quantity and amount are both known for a row and unit_price is not explicitly \
-printed, compute unit_price = amount / quantity, set status="present", note in reason that the \
-value was computed rather than read directly, and use a somewhat lower confidence than you would \
-for a value read directly off the receipt. Only mark unit_price as "not_present" when it \
-genuinely cannot be determined -- e.g. quantity itself is also unknown or not_present.
+a guess: if quantity is known and the item's original, pre-discount per-unit price can be \
+determined, compute unit_price = (original pre-discount price) / quantity, set status="present", \
+note in reason that the value was computed rather than read directly, and use a somewhat lower \
+confidence than you would for a value read directly off the receipt. unit_price must always \
+represent the item's original, pre-discount per-unit price -- never a discounted figure. If a \
+discount applies to this row (see below), do NOT compute unit_price from the discounted amount; \
+divide the same original, pre-discount price the discount itself was calculated from by \
+quantity instead. Only mark unit_price as "not_present" when the original per-unit price \
+genuinely cannot be determined -- e.g. quantity itself is also unknown or not_present, or only a \
+lump discounted total is printed with no way to recover the pre-discount figure.
 
 If part of a line item is obscured (by handwriting, a stamp, a fold, or similar) but there is \
 visible evidence the row exists (e.g. a partial line, a stray price, or a gap in the item \
@@ -222,7 +236,10 @@ If a receipt shows a discount as a percentage or amount on its own line directly
 (e.g. "Disc 5%") and no separate final discounted price is printed for that item, do not create \
 a separate line_items entry for the discount line itself. Instead, treat it as modifying the \
 item immediately above it: compute that item's amount as the post-discount total, and lower \
-confidence and note the computation in reason if the arithmetic is uncertain.
+confidence and note the computation in reason if the arithmetic is uncertain. amount is the only \
+field that reflects the discount -- unit_price for that row must still be the original, \
+pre-discount per-unit price (see the unit_price rule above), never recomputed from the \
+discounted amount.
 
 If a discount amount doesn't plausibly apply to the item immediately above it (e.g. the discount \
 exceeds that item's price, or the arithmetic is clearly inconsistent with it), do not force it \

@@ -1,0 +1,85 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "Depo Bangunan",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2026-07-16",
+      "confidence": 0.85,
+      "status": "present",
+      "reason": "Year digit is slightly ambiguous between 2024 and 2026."
+    },
+    "receipt_number": {
+      "value": "63195024",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 51163.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 5628.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 56791.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "BRAIDED BDH-104 40 CM FLEXIBLE",
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 61000.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 56791.0,
+          "confidence": 0.95,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 18.76449909999974,
+  "token_usage": {
+    "prompt_token_count": 3105,
+    "candidates_token_count": 328,
+    "thoughts_token_count": 2183,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 5616
+  }
+}

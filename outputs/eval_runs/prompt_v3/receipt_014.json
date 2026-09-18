@@ -1,0 +1,85 @@
+{
+  "result_type": "ReceiptExtraction",
+  "result": {
+    "vendor_name": {
+      "value": "FamilyMart",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "transaction_date": {
+      "value": "2025-07-30",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "receipt_number": {
+      "value": "9125073000290937",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "currency": {
+      "value": "IDR",
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "subtotal": {
+      "value": 44955.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "tax": {
+      "value": 4945.0,
+      "confidence": 0.95,
+      "status": "present",
+      "reason": null
+    },
+    "total": {
+      "value": 49900.0,
+      "confidence": 0.98,
+      "status": "present",
+      "reason": null
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Abc Alk LR06 4BAA4S",
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "quantity": {
+          "value": 1.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "unit_price": {
+          "value": 49900.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        },
+        "amount": {
+          "value": 49900.0,
+          "confidence": 0.98,
+          "status": "present",
+          "reason": null
+        }
+      }
+    ],
+    "subtotal_tax_total_consistent": true
+  },
+  "latency_seconds": 16.06032039999991,
+  "token_usage": {
+    "prompt_token_count": 2960,
+    "candidates_token_count": 314,
+    "thoughts_token_count": 1517,
+    "cached_content_token_count": 0,
+    "tool_use_prompt_token_count": 0,
+    "total_token_count": 4791
+  }
+}
