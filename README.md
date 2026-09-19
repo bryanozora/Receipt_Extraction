@@ -30,6 +30,19 @@ python scripts/score_eval.py <run_id>                  # score
 python scripts/diff_runs.py <run1_id> <run2_id>         # compare two runs
 ```
 
+To try the running API on any receipt image yourself (a multi-page receipt takes multiple `files` entries in one request):
+
+```python
+import requests
+
+path = "path/to/your_receipt.jpeg"
+with open(path, "rb") as f:
+    response = requests.post("http://localhost:8000/extract", files={"files": f})
+print(response.json())
+```
+
+Note: Swagger UI (`/docs`) has a known cosmetic bug where the file upload field renders as a plain text/array input instead of a file picker (a FastAPI/Swagger UI version mismatch, not a bug in this code) — use the snippet above or any HTTP client to test the API instead.
+
 `outputs/eval_runs/{default,prompt_v2,prompt_v3}/` are committed as real runs against the full 26-receipt dataset, so the eval results below can be inspected without spending API quota.
 
 ## Dataset, schema, and approach
